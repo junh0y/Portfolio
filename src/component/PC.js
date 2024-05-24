@@ -5,7 +5,6 @@ import '../public/css/PC.css';
 
 
 export default function PC( {projects, systemText} ) {
-  
   let [locale, setLocale] = useState(document.documentElement.lang);
   let text = systemText[locale];
   let CTKProject = projects[locale];
@@ -209,6 +208,7 @@ export default function PC( {projects, systemText} ) {
                     <span className='skill project1 project2 project3 project4'>PHP</span>
                     <span className='skill project1 project2 project3 project4'>Laravel</span>
                     <span className='skill project1 project2 project3 project4'>MySQL</span>
+                    <span className='skill project1 project2 project3 project4'>Docker</span>
                   </p>
                 </div>
               </div>
@@ -246,7 +246,7 @@ export default function PC( {projects, systemText} ) {
                   <p>{ text.backEnd }</p>
                 </div>
                 <div className='eachDesc'>
-                  <p>{ 'PHP, Laravel, MySQL' }</p>
+                  <p>{ 'PHP, Laravel, MySQL, Docker' }</p>
                 </div>
               </div>
               <div className='eachInfo'>

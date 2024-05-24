@@ -1,20 +1,23 @@
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+
 import PC from './component/PC.js';
 import Mobile from './component/Mobile.js';
+
 import projects from './public/js/CTKProject.js';
 import systemText from './systemText.js';
 
-function App() {
+const App = () => {
   const isMobile = /Mobi/i.test(window.navigator.userAgent); // "Mobi" 가 User agent에 포함되어 있으면 모바일
-  
+  console.log(isMobile);
   return (
     <>
-    { isMobile
-        ? 
-        <Mobile projects={ projects } systemText={ systemText } />
-        :
-        <PC projects={ projects } systemText={ systemText } />
-    }
+      <Routes>
+        <Route path="/" element={
+            isMobile ? <Mobile projects={ projects } systemText={ systemText } /> : <PC projects={ projects } systemText={ systemText } />
+            }>
+        </Route>
+      </Routes>
     </>
   );
 }

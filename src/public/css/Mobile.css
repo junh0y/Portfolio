@@ -20,6 +20,35 @@
     padding: 20px;
     position: relative;
 
+    .localeArea {
+      width: 100%;
+
+      .inner {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--grey);
+          font-size: 14px;
+          width: 40px;
+          height: 40px;
+          padding: 0 8px;
+          border-bottom: 2px solid transparent;
+        }
+        a:hover {
+          border-color: var(--grey);
+        }
+        a.active {
+          color: var(--white);
+          font-variation-settings: 'wght' 600;
+          border-color: var(--white);
+        }
+      }
+    }
     .leftArea {
       width: 100%;
       padding: 20px 0 0 0;
@@ -193,11 +222,11 @@
     border: 1px solid var(--grey);
     border-radius: 12px;
   }
-  .contents .rightArea .each .eachInfo .eachDesc p.skillSpan span.active {
+  /* .contents .rightArea .each .eachInfo .eachDesc p.skillSpan span.active {
     background-color: var(--grey);
     color: var(--black);
     font-variation-settings: 'wght' 600;
-  }
+  } */
   
   
   
@@ -227,7 +256,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    border-bottom: 1px solid var(--grey);
     margin-top: -10px;
   }
   .popup .inner .close {
@@ -242,7 +270,7 @@
     border-bottom: 2px solid transparent;
     margin-right: 0;
     font-variation-settings: 'wght' 600;
-    color: #A8A8A8;
+    color: var(--grey);
   }
   .popup .inner .nav a:not(:last-child) {
     margin-right: 8px;
@@ -285,7 +313,7 @@
     align-items: center;
     justify-content: center;
     width: 60px;
-    background-color: var(--grey);
+    background-color: var(--pink);
     border-radius: 4px;
     margin-top: 3px;
     margin-right: 12px;

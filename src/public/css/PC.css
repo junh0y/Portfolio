@@ -153,7 +153,7 @@
                 border-radius: 12px;
               }
               span.active {
-                background-color: var(--grey);
+                background-color: var(--pink);
                 color: var(--black);
                 font-variation-settings: 'wght' 600;
               }
@@ -247,25 +247,16 @@
       }
     }
     .rightArea::-webkit-scrollbar {
-      width: 2px;
+      width: 4px;
       border-radius: 1px;
-      margin-right: -8px;
     }
     .rightArea::-webkit-scrollbar-thumb,
     .rightArea::-webkit-scrollbar-track {
       border-radius: 1px;
       background-color: var(--black);
-      transition: all 1000ms linear;
-      -ms-transition: background-color 1000ms linear;
-      -webkit-transition: background-color 1000ms linear;
-      -webkit-backface-visibility: hidden;
     }
     .rightArea:hover::-webkit-scrollbar-thumb {
       background-color: var(--grey);
-      transition: all 1000ms linear;
-      -ms-transition: background-color 1000ms linear;
-      -webkit-transition: background-color 1000ms linear;
-      -webkit-backface-visibility: hidden;
     }
     .footer {
       position: absolute;
@@ -306,7 +297,6 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        border-bottom: 1px solid var(--grey);
         margin-top: -10px;
 
         a {
@@ -361,7 +351,7 @@
               align-items: center;
               justify-content: center;
               width: 60px;
-              background-color: var(--grey);
+              background-color: var(--pink);
               border-radius: 4px;
               margin-right: 12px;
               font-size: 12px;
@@ -396,7 +386,7 @@
         }
       }
       .projects::-webkit-scrollbar {
-        width: 2px;
+        width: 4px;
         border-radius: 1px;
       }
       .projects::-webkit-scrollbar-thumb {

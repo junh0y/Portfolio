@@ -246,8 +246,8 @@ a, area, button, input, label, select, summary, textarea, [tabindex] {
 body {
   --black: #121619;
   --yellow: #FFDB58;
-  --pink: #EFD5CO;
-  --grey: rgb(227, 225, 217);
+  --pink: #EFD5C0;
+  --grey: #E4E2DA;
   --white: #F9F9F9;
 
   margin: 0;

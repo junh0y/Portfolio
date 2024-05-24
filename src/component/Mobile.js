@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useRef } from 'react';
 import '../public/css/Mobile.css';
 
+
+
 export default function Mobile( {projects, systemText} ) {
+  let [locale, setLocale] = useState(document.documentElement.lang);
+  let text = systemText[locale];
+  let CTKProject = projects[locale];
+
+  const changeLocale = (language) => {
+    setLocale(language);
+    document.documentElement.lang = language;
+    text = systemText[language];
+    CTKProject = projects[language];
+  }
+
     const location1Ref = useRef();
     const location2Ref = useRef();
     const location3Ref = useRef();
@@ -86,18 +99,24 @@ export default function Mobile( {projects, systemText} ) {
       <div className='mobile'>
         <div className='page'>
           <div className='contents'>
+            <div className='localeArea'>
+              <div className='inner'>
+                <a href={ (e) => e.preventDefault() } onClick={ () => changeLocale('ko') } className={ locale === 'ko' ? 'active' : '' }>KO</a>
+                <a href={ (e) => e.preventDefault() } onClick={ () => changeLocale('en') } className={ locale === 'en' ? 'active' : '' }>EN</a>
+              </div>
+            </div>
             <div className='leftArea'>
               <div className='header'>
                 <div className='myName'>
-                  <h1>{ systemText.en.myName }</h1>
-                  <h2>{ systemText.en.frontEndDevloper }</h2>
+                  <h1>{ text.myName }</h1>
+                  <h2>{ text.frontEndDevloper }</h2>
                   <p>{ 'Front-end Deveoper with 2 years in a cosmectic platform. Developed 4 websites, which are 2 platforms, admin and HQ site.' }</p>
                 </div>
                 <div className="leftNavigation">
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(1) }>{ systemText.en.profile }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(2) }>{ systemText.en.workExperience }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(3) }>{ systemText.en.skills }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(4) }>{ systemText.en.study }</a>
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(1) }>{ text.profile }</a>
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(2) }>{ text.workExperience }</a>
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(3) }>{ text.skills }</a>
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(4) }>{ text.study }</a>
                   {/* <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(5) }>{ systemText.en.awardsProjects }</a> */}
                 </div>
               </div>
@@ -105,79 +124,79 @@ export default function Mobile( {projects, systemText} ) {
             <div className='rightArea'>
               {/* Profile */}
               <div className='each' ref={ location1Ref }>
-                <div className='mainTitle'>{ systemText.en.profile }</div>
-                <div className='eachInfo'>
-                  <div className='eachTitle'>
-                    <p>{ 'Address' }</p>
-                  </div>
-                  <div className='eachDesc'>
-                    <p>{ 'Seodaemun-gu, Seoul' }</p>
-                  </div>
+              <div className='mainTitle'>{ text.profile }</div>
+              <div className='eachInfo'>
+                <div className='eachTitle'>
+                  <p>{ text.address }</p>
                 </div>
-                <div className='eachInfo'>
-                  <div className='eachTitle'>
-                    <p>{ 'Phone' }</p>
-                  </div>
-                  <div className='eachDesc'>
-                    <p>{ '010-9164-1201' }</p>
-                  </div>
+                <div className='eachDesc'>
+                  <p>{ text.myAddress }</p>
                 </div>
-                <div className='eachInfo'>
-                  <div className='eachTitle'>
-                    <p>{ 'Email' }</p>
-                  </div>
-                  <div className='eachDesc'>
-                    <p>{ 'y.junh0y@gmail.com' }</p>
-                  </div>
+              </div>
+              <div className='eachInfo'>
+                <div className='eachTitle'>
+                  <p>{ text.phone }</p>
                 </div>
+                <div className='eachDesc'>
+                  <p>{ text.myPhone }</p>
+                </div>
+              </div>
+              <div className='eachInfo'>
+                <div className='eachTitle'>
+                  <p>{ text.email }</p>
+                </div>
+                <div className='eachDesc'>
+                  <p>{ text.myEmail }</p>
+                </div>
+              </div>
               </div>
               {/* Work Experience */}
               <div className='each' ref={ location2Ref }>
-                <div className='mainTitle'>{ systemText.en.workExperience }</div>
+                <div className='mainTitle'>{ text.workExperience }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ 'CTK' }</a>
+                    <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.ctk }</a>
                   </div>
                   <div className='eachDesc'>
-                    <p>{ '04/2022 - 04/2024' }</p>
-                    <p>{ 'Front End Developer / Assistant Manager' }</p>
-                    <p>{ 'Developed 4 sites and Based on PHP(Laravel), vue.js in case of CTKCLIP PARTNER.' }</p>
+                    <p>{ text.ctkDate }</p>
+                    <p>{ text.ctkRole }</p>
+                    <p dangerouslySetInnerHTML={{ __html: text.ctkDescription }}></p>
                     <div className='linkContent' onMouseLeave={ () => inactiveSkills() }>
                       <div className='eachLink' onMouseOver={ () => activeSkills(1) }>
                         <div className='imageArea'>
-                            <img src={ require('../images/CompanyLogo1.jpg') } alt={ 'CTK Cosmetics'} />
+                            <img src={ require('../images/CompanyLogo1.jpg') } alt={ text.ctkCosmetics } />
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>View projects</a>
-                          <a href='https://ctkcosmetics.com' target='_blank' rel='noreferrer'>Go to the site</a>
+                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</a>
+                          <a href='https://ctkcosmetics.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
                         </div>
                       </div>
                       <div className='eachLink' onMouseOver={ () => activeSkills(2) }>
                         <div className='imageArea'>
-                            <img src={ require('../images/CompanyLogo2.svg').default } alt={ 'innerbottle'} />
+                            <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip } />
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(2) }>View projects</a>
-                          <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>Go to the site</a>
+                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(2) }>{ text.viewProjects }</a>
+                          <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
                         </div>
                       </div>
                       <div className='eachLink' onMouseOver={ () => activeSkills(3) }>
                         <div className='imageArea'>
-                            <img src={ require('../images/CompanyLogo2.svg').default } alt={ 'innerbottle'} />
+                            <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip + ' ' + text.forPartner } />
                             <p>for Partner</p>
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(3) }>View projects</a>
-                          <a href='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>Go to the site</a>
+                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(3) }>{ text.viewProjects }</a>
+                          <a href='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
                         </div>
                       </div>
                       <div className='eachLink' onMouseOver={ () => activeSkills(4) }>
                         <div className='imageArea'>
-                            <img src={ require('../images/CompanyLogo2.svg').default } alt={ 'innerbottle'} />
+                            <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip + ' ' + text.forAdmin } />
                             <p>for Admin</p>
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(4) }>View projects</a>
+                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(4) }>{ text.viewProjects }</a>
                         </div>
                       </div>
                     </div>
@@ -197,17 +216,18 @@ export default function Mobile( {projects, systemText} ) {
                       <span className='skill project1 project2 project3 project4'>PHP</span>
                       <span className='skill project1 project2 project3 project4'>Laravel</span>
                       <span className='skill project1 project2 project3 project4'>MySQL</span>
+                      <span className='skill project1 project2 project3 project4'>Docker</span>
                     </p>
                   </div>
                 </div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <a href='https://innerbottle.com' target='_blank' rel='noreferrer'>{ 'Innerbottle' }</a>
+                    <a href='https://innerbottle.com' target='_blank' rel='noreferrer'>{ text.innerbottle }</a>
                   </div>
                   <div className='eachDesc'>
-                    <p>{ '06/2019 - 06/2021' }</p>
-                    <p>{ 'Engineer / Researcher' }</p>
-                    <p>{ 'Researched, devloped and controled quality to cosmetic packages.' }</p>
+                    <p>{ text.innerbottleDate }</p>
+                    <p>{ text.innerbottleRole }</p>
+                    <p dangerouslySetInnerHTML={{ __html: text.innerbottleDescription }}></p>
                     <p className='skillSpan'>
                       <span>SolidWorks</span>
                       <span>AutoCad 2D</span>
@@ -218,10 +238,10 @@ export default function Mobile( {projects, systemText} ) {
               </div>
               {/* Skills */}
               <div className='each' ref={ location3Ref }>
-                <div className='mainTitle'>{ systemText.en.skills }</div>
+                <div className='mainTitle'>{ text.skills }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <p>{ 'Front-end' }</p>
+                    <p>{ text.frontEnd }</p>
                   </div>
                   <div className='eachDesc'>
                     <p>{ 'HTML, CSS, Javascript' }</p>
@@ -231,15 +251,15 @@ export default function Mobile( {projects, systemText} ) {
                 </div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <p>{ 'Back-end' }</p>
+                    <p>{ text.backEnd }</p>
                   </div>
                   <div className='eachDesc'>
-                    <p>{ 'PHP, Laravel, MySQL' }</p>
+                    <p>{ 'PHP, Laravel, MySQL, Docker' }</p>
                   </div>
                 </div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <p>{ 'Others' }</p>
+                    <p>{ text.others }</p>
                   </div>
                   <div className='eachDesc'>
                     <p>{ 'Gitlab, Slack' }</p>
@@ -248,26 +268,25 @@ export default function Mobile( {projects, systemText} ) {
               </div>
               {/* Study */}
               <div className='each' ref={ location4Ref }>
-                <div className='mainTitle'>{ systemText.en.study }</div>
+                <div className='mainTitle'>{ text.study }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <p>{ 'KOSMO' }</p>
+                    <p>{ text.kosmo }</p>
                   </div>
                   <div className='eachDesc'>
-                    <p>{ '2021.09 - 2022.03' }</p>
-                    <p>{ 'Learned programming skills and developed some projects.' }</p>
+                    <p>{ text.kosmoDate }</p>
+                    <p>{ text.kosmoDesc }</p>
                     <p>{ 'HTML, CSS, Javascript, Java, Spring, React, Android' }</p>
                   </div>
                 </div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <p>{ 'Hongik University' }</p>
+                    <p>{ text.hongik }</p>
                   </div>
                   <div className='eachDesc'>
-                    <p>{ '2010.03 - 2017.02' }</p>
-                    <p>{ 'Bachelor degree' }</p>
-                    <p>{ 'Mechanical System Design Engineering' }</p>
-                    <p>{ '(minor) Ceramic & Class' }</p>
+                    <p>{ text.hongikDate }</p>
+                    <p>{ text.hongikMajor }</p>
+                    <p>{ text.hongikMinor }</p>
                   </div>
                 </div>
               </div>
@@ -288,7 +307,7 @@ export default function Mobile( {projects, systemText} ) {
               </div>
               <div className='nav'>
                 {
-                  projects.map((project, key) => {
+                  CTKProject.map((project, key) => {
                     return (
                       <a
                         href={ (e) => e.preventDefault() }
@@ -304,7 +323,7 @@ export default function Mobile( {projects, systemText} ) {
               </div>
               <div className='projects'>
                 {
-                  projects.map((project, key1) => {
+                  CTKProject.map((project, key1) => {
                     const eachProject = project.contents;
                     return (
                       <div className={`eachProject ctkProject${ key1 + 1 }`} key={ `CTKEachContent${ key1 }` }>
