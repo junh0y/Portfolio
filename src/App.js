@@ -1,24 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import PC from './component/PC.js';
+import Mobile from './component/Mobile.js';
+import projects from './public/js/CTKProject.js';
+import systemText from './systemText.js';
 
 function App() {
+  const isMobile = /Mobi/i.test(window.navigator.userAgent); // "Mobi" 가 User agent에 포함되어 있으면 모바일
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    { isMobile
+        ? 
+        <Mobile projects={ projects } systemText={ systemText } />
+        :
+        <PC projects={ projects } systemText={ systemText } />
+    }
+    </>
   );
 }
 
