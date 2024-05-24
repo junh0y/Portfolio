@@ -196,6 +196,7 @@
                   display: none;
                   width: 100%;
                   min-width: 100%;
+                  width: -webkit-fill-available;
                   a {
                     display: block;
                     width: 90%;
