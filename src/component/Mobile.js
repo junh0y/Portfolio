@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
 import '../public/css/Mobile.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -155,7 +156,7 @@ export default function Mobile( {projects, systemText} ) {
                 <div className='mainTitle'>{ text.workExperience }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.ctk }</a>
+                    <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.ctk }</Link>
                   </div>
                   <div className='eachDesc'>
                     <p>{ text.ctkDate }</p>
@@ -168,7 +169,7 @@ export default function Mobile( {projects, systemText} ) {
                         </div>
                         <div className='hoverChange'>
                           <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</a>
-                          <a href='https://ctkcosmetics.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
+                          <Link to='https://www.ctkcosmetics.com/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
                       <div className='eachLink' onMouseOver={ () => activeSkills(2) }>
@@ -177,7 +178,7 @@ export default function Mobile( {projects, systemText} ) {
                         </div>
                         <div className='hoverChange'>
                           <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(2) }>{ text.viewProjects }</a>
-                          <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
+                          <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
                       <div className='eachLink' onMouseOver={ () => activeSkills(3) }>
@@ -187,7 +188,7 @@ export default function Mobile( {projects, systemText} ) {
                         </div>
                         <div className='hoverChange'>
                           <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(3) }>{ text.viewProjects }</a>
-                          <a href='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
+                          <Link to='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
                       <div className='eachLink' onMouseOver={ () => activeSkills(4) }>
@@ -222,7 +223,7 @@ export default function Mobile( {projects, systemText} ) {
                 </div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
-                    <a href='https://innerbottle.com' target='_blank' rel='noreferrer'>{ text.innerbottle }</a>
+                    <Link to='https://innerbottle.com' target='_blank' rel='noreferrer'>{ text.innerbottle }</Link>
                   </div>
                   <div className='eachDesc'>
                     <p>{ text.innerbottleDate }</p>

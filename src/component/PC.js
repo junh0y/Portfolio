@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRef } from 'react';
 import '../public/css/PC.css';
+import { Link } from 'react-router-dom';
 
 
 
@@ -155,7 +156,7 @@ export default function PC( {projects, systemText} ) {
               <div className='mainTitle'>{ text.workExperience }</div>
               <div className='eachInfo'>
                 <div className='eachTitle'>
-                  <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.ctk }</a>
+                  <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.ctk }</Link>
                 </div>
                 <div className='eachDesc'>
                   <p>{ text.ctkDate }</p>
@@ -166,14 +167,14 @@ export default function PC( {projects, systemText} ) {
                       <img src={ require('../images/CompanyLogo1.jpg') } alt={ text.ctkCosmetics } />
                       <div className='hoverChange'>
                         <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</a>
-                        <a href='https://ctkcosmetics.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
+                        <Link to='https://www.ctkcosmetics.com/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                       </div>
                     </div>
                     <div className='eachLink' onMouseOver={ () => activeSkills(2) }>
                       <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip } />
                       <div className='hoverChange'>
                         <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(2) }>{ text.viewProjects }</a>
-                        <a href='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
+                        <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                       </div>
                     </div>
                     <div className='eachLink' onMouseOver={ () => activeSkills(3) }>
@@ -181,7 +182,7 @@ export default function PC( {projects, systemText} ) {
                       <p>{ text.forPartner }</p>
                       <div className='hoverChange'>
                         <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(3) }>{ text.viewProjects }</a>
-                        <a href='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</a>
+                        <Link to='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                       </div>
                     </div>
                     <div className='eachLink' onMouseOver={ () => activeSkills(4) }>
@@ -214,7 +215,7 @@ export default function PC( {projects, systemText} ) {
               </div>
               <div className='eachInfo'>
                 <div className='eachTitle'>
-                  <a href='https://innerbottle.com' target='_blank' rel='noreferrer'>{ text.innerbottle }</a>
+                  <Link to='https://innerbottle.com' target='_blank' rel='noreferrer'>{ text.innerbottle }</Link>
                 </div>
                 <div className='eachDesc'>
                   <p>{ text.innerbottleDate }</p>
