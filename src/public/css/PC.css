@@ -194,9 +194,6 @@
                 }
                 .hoverChange {
                   display: none;
-                  width: 100%;
-                  min-width: 100%;
-                  width: -webkit-fill-available;
                   a {
                     display: block;
                     width: 90%;
@@ -229,12 +226,10 @@
               .eachLink:hover {
                 .hoverChange {
                   display: flex;
+                  flex-grow: 1;
                   flex-wrap: wrap;
                   align-items: center;
                   justify-content: center;
-                  width: 100%;
-                  min-width: 100%;
-                  width: -webkit-fill-available;
                 }
                 img, p {
                   display: none;
