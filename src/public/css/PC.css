@@ -233,6 +233,7 @@
                   justify-content: center;
                   width: 100%;
                   min-width: 100%;
+                  width: -webkit-fill-available;
                 }
                 img, p {
                   display: none;
