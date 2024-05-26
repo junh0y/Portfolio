@@ -21,7 +21,7 @@ export default function Mobile( {projects, systemText} ) {
     const location2Ref = useRef();
     const location3Ref = useRef();
     const location4Ref = useRef();
-    // const location5Ref = useRef();
+    const location5Ref = useRef();
   
     const popup = useRef(null);
   
@@ -34,10 +34,9 @@ export default function Mobile( {projects, systemText} ) {
         location3Ref.current?.scrollIntoView({ behavior: 'smooth' });
       } else if (location === 4) {
         location4Ref.current?.scrollIntoView({ behavior: 'smooth' });
+      } else if (location === 5) {
+        location5Ref.current?.scrollIntoView({ behavior: 'smooth' });
       }
-      // else if (location === 5) {
-      //   location5Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      // }
     }
   
     const activeSkills = (project) => {
@@ -111,45 +110,35 @@ export default function Mobile( {projects, systemText} ) {
                 <div className='myName'>
                   <h1>{ text.myName }</h1>
                   <h2>{ text.frontEndDevloper }</h2>
-                  <p>{ 'Front-end Deveoper with 2 years in a cosmectic platform. Developed 4 websites, which are 2 platforms, admin and HQ site.' }</p>
+                  <div>
+                    <p>
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARRJREFUSEvtlLFOwzAURc/9CgaGAoIFhJAYixi7deRz2PmZrmxsFUxILC0SQoJ26NCveMiRE6XBjZ8R3eolSvR8jp99HbHjoR3zcQvM7AB4BAwYS1p7FucSRPgLcBKhX8DQI8kKInwKnAHLKBgAn8BtTtIr6Kx8BdxEwTNwCGQ72SpIwSVVHZhZ6MAlSQr64PXBeiW/BB54iWRDUAL3ShpBJy1h/rGkhSfrZnYEfMfajXRVAjMLzzfgqgZKyka4LTezcAHrMZN0GV7aglfg+p8ET5JGjSC1kr920J2XSlHV6l7QnGU3hnUa9lvUt0Vz4NxzgxM175Iu2t9TMb0DHoDTQskHcC9p0isohGbLi/43WVqi4AcdgqsZWC8YwQAAAABJRU5ErkJggg==" alt={ text.address } />
+                      { text.myAddress }
+                    </p>
+                    <p>
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXVJREFUSEvdlS9IZFEUxn8fIgaDySALghh0w/YtNuOCMFoVbIJJMLhlkU0KgmnBtuDW3bWIyWYxa9AkowgGk8Egsn7rGe6TmdF5vpnHlLnlhnPv+Z3vO/eP6PJQl/PTQwDbM8AGMFnStjNgVdJB5HmxyPY18KFk8mz7haTxZoBT9KOk805AtkN9KEBSrfh6BRngHliQ9LcdiO0KsAsMvgfI8m4Ba5L+5YFs96Xerdavy1OwCOwAA8ARMCvp9i2I7WHgDzAFPABLwM9cBUG2/QnYB0aBG6Ai6bgeYvszEDaOAFfAF0mntmtWt1SQBWwPAb+BaeARWJH0IzbbXga2gX7gEJiTdJdixQBpcRyCdeBbqv5XmufTHLHvITpTV1hBkx2hItSEqhhRbVQd1TeMjgBJzRiw96zmKfWk2qLxxS1q5x6UsqgdUMcWFYXkAS7TuS+aK29dVVL0rOEtiud6E5goSTh5vtVfXz3XJZO23N5DX2a3LPoPOrOrGWF3AyAAAAAASUVORK5CYII=" alt={ text.email }/>
+                      { text.myEmail }
+                    </p>
+                </div>
                 </div>
                 <div className="leftNavigation">
                   <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(1) }>{ text.profile }</a>
                   <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(2) }>{ text.workExperience }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(3) }>{ text.skills }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(4) }>{ text.study }</a>
-                  {/* <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(5) }>{ systemText.en.awardsProjects }</a> */}
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(3) }>{ text.projects }</a>
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(4) }>{ text.skills }</a>
+                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(5) }>{ systemText.en.study }</a>
                 </div>
               </div>
             </div>
             <div className='rightArea'>
-              {/* Profile */}
+              {/* About */}
               <div className='each' ref={ location1Ref }>
-              <div className='mainTitle'>{ text.profile }</div>
-              <div className='eachInfo'>
-                <div className='eachTitle'>
-                  <p>{ text.address }</p>
+                <div className='mainTitle'>{ text.profile }</div>
+                <div className='eachInfo'>
+                  <div className='eachDesc'>
+                    <p dangerouslySetInnerHTML={{ __html: text.aboutMe }}></p>
+                  </div>
                 </div>
-                <div className='eachDesc'>
-                  <p>{ text.myAddress }</p>
-                </div>
-              </div>
-              <div className='eachInfo'>
-                <div className='eachTitle'>
-                  <p>{ text.phone }</p>
-                </div>
-                <div className='eachDesc'>
-                  <p>{ text.myPhone }</p>
-                </div>
-              </div>
-              <div className='eachInfo'>
-                <div className='eachTitle'>
-                  <p>{ text.email }</p>
-                </div>
-                <div className='eachDesc'>
-                  <p>{ text.myEmail }</p>
-                </div>
-              </div>
               </div>
               {/* Work Experience */}
               <div className='each' ref={ location2Ref }>
@@ -237,8 +226,26 @@ export default function Mobile( {projects, systemText} ) {
                   </div>
                 </div>
               </div>
-              {/* Skills */}
+              {/* Projects */}
               <div className='each' ref={ location3Ref }>
+                <div className='mainTitle'>{ text.projects }</div>
+                <div className='eachInfo'>
+                  <div className='eachTitle'>
+                  <Link to='https://junh0y.github.io/Portfolio/' target='_blank' rel='noreferrer'>{ text.portfolio }</Link>
+                  </div>
+                  <div className='eachDesc'>
+                    <p>{ text.portfolioDesc }</p>
+                    <p className='skillSpan'>
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>Javascript</span>
+                      <span>React</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* Skills */}
+              <div className='each' ref={ location4Ref }>
                 <div className='mainTitle'>{ text.skills }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
@@ -268,7 +275,7 @@ export default function Mobile( {projects, systemText} ) {
                 </div>
               </div>
               {/* Study */}
-              <div className='each' ref={ location4Ref }>
+              <div className='each' ref={ location5Ref }>
                 <div className='mainTitle'>{ text.study }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>

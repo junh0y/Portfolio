@@ -2,18 +2,20 @@ const systemText = {
     ko: {
         'myName': '양준형',
         'frontEndDevloper': '프론트엔드 개발자',
+        'about': '소개',
         'profile': '프로필',
         'workExperience': '경력사항',
         'skills': '스킬',
         'study': '교육',
-        'awardsProjects': '수상 및 프로젝트',
+        'projects': '프로젝트',
 
         'address': '주소',
-        'myAddress': '서울 서대문구',
+        'myAddress': '아일랜드 더블린',
         'phone': '전화번호',
         'myPhone': '010-9164-1201',
         'email': '이메일',
         'myEmail': 'y.junh0y@gmail.com',
+        'aboutMe': '안녕하세요. 프론트엔드 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">프론트엔드</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 프론트엔드뿐만 아니라 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span> 업무도 담당했습니다.',
 
         'ctk': '씨티케이',
         'ctkCosmetics': '씨티케이 코스메틱스',
@@ -33,6 +35,9 @@ const systemText = {
         'viewProjects': '프로젝트 보기',
         'goToTheSite': '사이트 이동',
 
+        'portfolio': '포트폴리오',
+        'portfolioDesc': '개인 포트폴리오 사이트',
+
         'frontEnd': '프론트엔드',
         'backEnd': '백엔드',
         'others': '기타',
@@ -49,18 +54,20 @@ const systemText = {
     en: {
         'myName': 'Jun Hyeong Yang',
         'frontEndDevloper': 'Front-end Developer',
+        'about': 'About',
         'profile': 'Profile',
         'workExperience': 'Work Experience',
         'skills': 'Skills',
         'study': 'Study',
-        'awardsProjects': 'Awards & Projects',
+        'projects': 'Projects',
 
         'address': 'Address',
-        'myAddress': 'Seodaemun-gu, Seoul',
+        'myAddress': 'Dublin, Ireland',
         'phone': 'Phone',
         'myPhone': '010-9164-1201',
         'email': 'Email',
         'myEmail': 'y.junh0y@gmail.com',
+        'aboutMe': 'Hello. I am Junhyeong Yang, a front-end developer. After completing a full-stack development course, I have spent the past two years building a platform site as a <span class="bold">front-end development</span>(PHP, Laravel). Leveraging my previous experience in the related industry, I have handled not only front-end development but also <span class="bold">web planning, database design, and back-end</span> (API development) tasks.',
 
         'ctk': 'CTK',
         'ctkCosmetics': 'CTK Cosmetics',
@@ -79,6 +86,9 @@ const systemText = {
 
         'viewProjects': 'View projects',
         'goToTheSite': 'Go to the site',
+
+        'portfolio': 'Portfolio',
+        'portfolioDesc': 'Personal portfolio site',
 
         'frontEnd': 'Front-end',
         'backEnd': 'Back-end',

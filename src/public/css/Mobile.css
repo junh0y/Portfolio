@@ -69,8 +69,18 @@
             line-height: 1.2500;
             padding-top: 16px;
           }
-          p {
+          div {
+            color: var(--white);
             padding-top: 16px;
+            p {
+              display: flex;
+              align-items: center;
+              img {
+                width: 18px;
+                aspect-ratio: 1;
+                margin-right: 4px;
+              }
+            }
           }
         }
 
@@ -140,6 +150,10 @@
   }
   .contents .rightArea .each .eachInfo .eachDesc p {
     padding-top: 8px;
+    span.bold {
+      font-variation-settings: 'wght' 600;
+      color: var(--pink);
+    }
   }
   .contents .rightArea .each .eachInfo .eachDesc .linkContent {
     display: flex;

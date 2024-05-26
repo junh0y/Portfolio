@@ -13,7 +13,6 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
   
-  
   .contents {
     display: flex;
     width: 100%;
@@ -78,8 +77,18 @@
             line-height: 1.2500;
             padding-top: 16px;
           }
-          p {
+          div {
+            color: var(--white);
             padding-top: 16px;
+            p {
+              display: flex;
+              align-items: center;
+              img {
+                width: 18px;
+                aspect-ratio: 1;
+                margin-right: 4px;
+              }
+            }
           }
         }
         .leftNavigation {
@@ -137,7 +146,11 @@
   
           .eachDesc {
             p {
-            padding-top: 8px;
+              padding-top: 8px;
+              span.bold {
+                font-variation-settings: 'wght' 600;
+                color: var(--pink);
+              }
             }
             p:first-child {
               padding-top: 0;
@@ -248,6 +261,9 @@
       .each:nth-child(2) {
         margin-top: 16px;  
       }
+      .each:last-child {
+        margin-bottom: 0;
+      }
     }
     .rightArea::-webkit-scrollbar {
       width: 4px;
@@ -273,10 +289,6 @@
     }
   }
   
-
-
-  
-
   .popup {
     position: absolute;
     bottom: 0;
@@ -406,6 +418,211 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .pc {
+    font-size: 1.23vw;
+    .contents {
+      max-width: 110.77vw;
+      padding: 12.31vw 7.69vw;
+  
+      .localeArea {
+        top: 7.38vw;
+        padding: 0 7.69vw;
+  
+        .inner {
+          a {
+            font-size: 1.08vw;
+            width: 3.08vw;
+            height: 3.08vw;
+            padding: 0 0.62vw;
+            border-bottom: 0.15vw solid transparent;
+          }
+        }
+      }
+  
+      .leftArea {
+        padding: 0.62vw 4.92vw 0.62vw 0.62vw;
+    
+        .header {
+          .myName {
+            h1 {
+             font-size: 2.77vw;
+            }
+            h2 {
+              font-size: 1.54vw;
+              padding-top: 1.23vw;
+            }
+            div {
+              padding-top: 1.23vw;
+              p {
+                img {
+                  width: 1.38vw;
+                  margin-right: 0.31vw;
+                }
+              }
+            }
+          }
+          .leftNavigation {
+            padding: 4.92vw 0;
+            a {
+              margin: 0.15vw 0;
+              padding: 0.15vw 0
+            }
+          }
+        }
+      }
+  
+      .rightArea {
+        width: 60%;
+        padding: 0.62vw 1.23vw 0.62vw 0.62vw;
+    
+        .each {
+          margin-bottom: 4.92vw;
+    
+          .mainTitle {
+            font-size: 1.85vw;
+            padding: 0.62vw 0;
+            border-bottom: 0.08vw solid var(--grey);
+          }
+          .eachInfo {
+            padding-top: 0.31vw;
+    
+            .eachTitle {
+              width: 15.38vw;
+    
+              a::after {
+                margin-left: 0.31vw;
+              }
+            }
+    
+            .eachDesc {
+              p {
+              padding-top: 0.62vw;
+              }
+              p:first-child {
+                padding-top: 0;
+              }
+              p.skillSpan {
+                span {
+                  font-size: 1.08vw;
+                  padding: 0.46vw 0.31vw;
+                  margin: 0.08vw 0.31vw 0.08vw 0;
+                  border: 0.08vw solid var(--grey);
+                  border-radius: 0.92vw;
+                }
+              }
+              .linkContent {
+                .eachLink {
+                  width: calc(50% - 0.31vw);
+                  margin-top: 0.62vw;
+                  padding: 0.77vw;
+                  border-radius: 0.62vw;
+                  p {
+                    padding: 0;
+                    margin-top: 0.31vw;
+                  }
+                  .hoverChange {
+                    a {
+                      font-size: 1.08vw;
+                      padding: 0.31vw;
+                      margin-top: 0;
+                      border: 0.08vw solid var(--grey);
+                    }
+                    a:nth-child(2n) {
+                      margin-top: 0.31vw;
+                    }
+                    a:hover:after {
+                      margin-left: 0.31vw;
+                    }
+                  }
+                }
+              }
+              .linkContent:has(.eachLink) {
+                max-width: 420px;
+              }
+            }
+            .eachInfo:not(:first-child) {
+              margin-top: 0.62vw;
+            }
+          }
+          .eachInfo:not(:first-child) {
+            margin-top: 1.23vw;
+          }
+        }
+        .each:nth-child(2) {
+          margin-top: 1.23vw;  
+        }
+      }
+      .rightArea::-webkit-scrollbar {
+        width: 0.31vw;
+        border-radius: 0.08vw;
+      }
+      .rightArea::-webkit-scrollbar-thumb,
+      .rightArea::-webkit-scrollbar-track {
+        border-radius: 0.08vw;
+      }
+      .footer {
+        bottom: 10.46vw;
+        left: 0;
+        padding: 0 7.69vw;
+      }
+    }
+    
+  
+  
+    
+  
+    .popup {
+      .inner {
+        min-width: 59.08vw;
+        height: calc(100vh - 15.38vw);
+        padding: 1.54vw 3.08vw 3.08vw 3.08vw;
+        border-radius: 0.92vw;
+  
+        .nav {
+          margin-top: -0.77vw;
+  
+          a {
+            padding: 0.92vw 0.46vw;
+            border-bottom: 0.15vw solid transparent;
+            margin-right: 0;
+          }
+          a:not(:last-child) {
+            margin-right: 0.62vw;
+          }
+        }
+  
+        .projects {
+          margin-top: 1.23vw;
+          padding: 0 0 2.46vw 0;
+          max-height: calc(100% - 70.31vw);
+  
+          .eachProject {
+            ul {
+              margin-top: 2.46vw;
+              li:before {
+                width: 4.62vw;
+                border-radius: 0.31vw;
+                margin-right: 0.92vw;
+                font-size: 0.92vw;
+              }
+              li:nth-child(6):before {
+                margin-top: 0.23vw;
+              }
+            }
+            ul:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+        .projects::-webkit-scrollbar {
+          width: 0.31vw;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .pc {
     .page {
@@ -417,7 +634,6 @@
       width: 100%;
       max-width: 100%;
       height: 100%;
-      padding: 100px;
 
       .localeArea {
         top: 60px;
@@ -431,6 +647,7 @@
         position: relative;
         bottom: 0;
         padding: 0;
+        margin-top: 100px;
       }
     }
 
@@ -461,41 +678,188 @@
 
 @media (max-width: 768px) {
   .pc {
-    min-width: 768px;
+    font-size: 12px;
     .contents {
-      padding: 40px;
-
+      max-width: 851px;
+      padding: 95px 59px;
+  
       .localeArea {
-        top: 20px;
-        padding: 0 40px;
-      }
-    }
-
-    .popup {
-      position: fixed;
-
-      .inner {
-        padding: 20px 16px;
-
-        .nav {
-          margin-top: 0;
+        top: 57px;
+        padding: 0 59px;
+  
+        .inner {
           a {
-            padding: 6px;
-            letter-spacing: -0.35px;
-          }
-          a:not(:last-child) {
-            margin-right: 0;
+            font-size: 8px;
+            width: 24px;
+            height: 24px;
+            padding: 0 5px;
+            border-bottom: 1px solid transparent;
           }
         }
-
-        .projects {
-          .eachProject {
-            ul {
-              li {
-                margin-top: 3px;
+      }
+  
+      .leftArea {
+        padding: 5px 38px 5px 5px;
+    
+        .header {
+          .myName {
+            h1 {
+             font-size: 21px;
+            }
+            h2 {
+              font-size: 12px;
+              padding-top: 9px;
+            }
+            
+            div {
+              padding-top: 9px;
+              p {
+                img {
+                  width: 11px;
+                  margin-right: 2px;
+                }
               }
             }
           }
+          .leftNavigation {
+            padding: 38px 0;
+            a {
+              margin: 1px 0;
+              padding: 1px 0
+            }
+          }
+        }
+      }
+  
+      .rightArea {
+        padding: 5px 9px 5px 5px;
+    
+        .each {
+          margin-bottom: 38px;
+    
+          .mainTitle {
+            font-size: 14px;
+            padding: 5px 0;
+            border-bottom: 1px solid var(--grey);
+          }
+          .eachInfo {
+            padding-top: 2px;
+    
+            .eachTitle {
+              width: 118px;
+    
+              a::after {
+                margin-left: 2px;
+              }
+            }
+    
+            .eachDesc {
+              p {
+                padding-top: 5px;
+              }
+              p:first-child {
+                padding-top: 0;
+              }
+              p.skillSpan {
+                span {
+                  font-size: 8px;
+                  padding: 4px 2px;
+                  margin: 1px 2px 1px 0;
+                  border: 1px solid var(--grey);
+                  border-radius: 7px;
+                }
+              }
+              .linkContent {
+                .eachLink {
+                  width: calc(50% - 2px);
+                  margin-top: 5px;
+                  padding: 12px;
+                  border-radius: 5px;
+                  p {
+                    padding: 0;
+                    margin-top: 2px;
+                  }
+                  .hoverChange {
+                    a {
+                      font-size: 8px;
+                      padding: 2px;
+                      margin-top: 0;
+                      border: 1px solid var(--grey);
+                    }
+                    a:nth-child(2n) {
+                      margin-top: 2px;
+                    }
+                    a:hover:after {
+                      margin-left: 2px;
+                    }
+                  }
+                }
+              }
+            }
+            .eachInfo:not(:first-child) {
+              margin-top: 5px;
+            }
+          }
+          .eachInfo:not(:first-child) {
+            margin-top: 9px;
+          }
+        }
+        .each:nth-child(2) {
+          margin-top: 9px;  
+        }
+      }
+      .footer {
+        bottom: 0;
+        left: 0;
+        padding: 0;
+      }
+    }
+    
+    .popup {
+      .inner {
+        min-width: 454px;
+        height: calc(100vh - 118px);
+        padding: 12px 24px 24px 24px;
+        border-radius: 7px;
+  
+        .nav {
+          margin-top: -6px;
+  
+          a {
+            padding: 7px 4px;
+            border-bottom: 1px solid transparent;
+            margin-right: 0;
+          }
+          a:not(:last-child) {
+            margin-right: 5px;
+          }
+        }
+  
+        .projects {
+          margin-top: 9px;
+          padding: 0 0 19px 0;
+          max-height: calc(100% - 72px);
+  
+          .eachProject {
+            ul {
+              margin-top: 19px;
+              li:before {
+                width: 35px;
+                border-radius: 2px;
+                margin-right: 7px;
+                font-size: 7px;
+              }
+              li:nth-child(6):before {
+                margin-top: 2px;
+              }
+            }
+            ul:first-child {
+              margin-top: 0;
+            }
+          }
+        }
+        .projects::-webkit-scrollbar {
+          width: 2px;
         }
       }
     }
