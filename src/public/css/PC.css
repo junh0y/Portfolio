@@ -642,6 +642,7 @@
               padding-left: 15.38vw;
               .button {
                 flex-flow: unset;
+                flex-grow: 0;
                 width: 41.02vw;
                 border: 0.08vw solid var(--pink);
                 border-radius: 0.31vw;

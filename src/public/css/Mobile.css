@@ -176,6 +176,7 @@
                 justify-content: center;
                 align-content: center;
                 flex-wrap: wrap;
+                flex-grow: 1;
                 width: 100%;
                 aspect-ratio: 3.5;
                 margin-top: 8px;
@@ -209,7 +210,10 @@
                   align-items: center;
                   justify-content: center;
                   a {
-                    display: block;
+                    display: flex;
+                    flex-grow: 1;
+                    align-items: center;
+                    justify-content: center;
                     width: 100%;
                     font-size: 14px;
                     text-align: center;
