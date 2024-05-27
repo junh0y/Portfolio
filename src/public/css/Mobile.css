@@ -236,6 +236,11 @@
               }  
             }
           }
+          .eachDesc:has(input, textarea) {
+            display: flex;
+            flex-flow: column;
+            max-width: 100%;
+          }
           .eachDesc:has(.button) {
             display: flex;
             align-items: center;
@@ -243,7 +248,10 @@
             flex-grow: 1;
             .button {
               width: 100%;
-              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-grow: 1;
               color: var(--pink);
               font-variation-settings: 'wght' 600;
               background-color: var(--black);

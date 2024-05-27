@@ -268,6 +268,8 @@
             }
           }
           .eachDesc:has(input, textarea) {
+            display: flex;
+            flex-flow: column;
             max-width: 100%;
           }
           .eachDesc:has(.button) {
@@ -279,8 +281,11 @@
             padding-left: 200px;
             
             .button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-grow: 1;
               width: 100%;
-              text-align: center;
               color: var(--pink);
               font-variation-settings: 'wght' 600;
               background-color: var(--black);
@@ -636,6 +641,7 @@
             .eachDesc:has(.button) {
               padding-left: 15.38vw;
               .button {
+                flex-flow: unset;
                 width: 41.02vw;
                 border: 0.08vw solid var(--pink);
                 border-radius: 0.31vw;
