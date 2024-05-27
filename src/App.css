@@ -254,3 +254,6 @@ body {
   background-color: var(--black);
   color: var(--white);
 }
+body:has(.page.dimmed) {
+  overflow: hidden;
+}

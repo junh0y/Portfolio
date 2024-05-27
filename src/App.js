@@ -9,7 +9,7 @@ import systemText from './systemText.js';
 
 const App = () => {
   const isMobile = /Mobi/i.test(window.navigator.userAgent); // "Mobi" 가 User agent에 포함되어 있으면 모바일
-  console.log(isMobile);
+
   return (
     <>
       <Routes>

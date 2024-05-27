@@ -8,6 +8,7 @@ const systemText = {
         'skills': '스킬',
         'study': '교육',
         'projects': '프로젝트',
+        'contact': '문의',
 
         'address': '주소',
         'myAddress': '아일랜드 더블린',
@@ -16,6 +17,11 @@ const systemText = {
         'email': '이메일',
         'myEmail': 'y.junh0y@gmail.com',
         'aboutMe': '안녕하세요. 프론트엔드 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">프론트엔드</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 프론트엔드뿐만 아니라 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span> 업무도 담당했습니다.',
+        'content': '내용',
+        'sendEmail': '이메일 발송',
+        'emailAlert': '이메일 주소를 입력하세요.',
+        'contentAlert': '내용을 입력하세요.',
+        'sendSuccess': '이메일 발송이 완료되었습니다.',
 
         'ctk': '씨티케이',
         'ctkCosmetics': '씨티케이 코스메틱스',
@@ -60,6 +66,8 @@ const systemText = {
         'skills': 'Skills',
         'study': 'Study',
         'projects': 'Projects',
+        'contact': 'Contact',
+        'sendEmail': 'Send an email',
 
         'address': 'Address',
         'myAddress': 'Dublin, Ireland',
@@ -68,6 +76,10 @@ const systemText = {
         'email': 'Email',
         'myEmail': 'y.junh0y@gmail.com',
         'aboutMe': 'Hello. I am Junhyeong Yang, a front-end developer. After completing a full-stack development course, I have spent the past two years building a platform site as a <span class="bold">front-end development</span>(PHP, Laravel). Leveraging my previous experience in the related industry, I have handled not only front-end development but also <span class="bold">web planning, database design, and back-end</span> (API development) tasks.',
+        'content': 'Content',
+        'emailAlert': 'Please enter an email address.',
+        'contentAlert': 'Please enter content.',
+        'sendSuccess': 'The email has been sent successfully.',
 
         'ctk': 'CTK',
         'ctkCosmetics': 'CTK Cosmetics',

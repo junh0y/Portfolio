@@ -7,6 +7,9 @@ import { Link } from 'react-router-dom';
 
 export default function Mobile( {projects, systemText} ) {
   let [locale, setLocale] = useState(document.documentElement.lang);
+  let [email, setEmail] = useState('');
+  let [content, setContent] = useState('');
+
   let text = systemText[locale];
   let CTKProject = projects[locale];
 
@@ -22,6 +25,7 @@ export default function Mobile( {projects, systemText} ) {
     const location3Ref = useRef();
     const location4Ref = useRef();
     const location5Ref = useRef();
+    const location6Ref = useRef();
   
     const popup = useRef(null);
   
@@ -36,6 +40,8 @@ export default function Mobile( {projects, systemText} ) {
         location4Ref.current?.scrollIntoView({ behavior: 'smooth' });
       } else if (location === 5) {
         location5Ref.current?.scrollIntoView({ behavior: 'smooth' });
+      } else if (location === 6) {
+        location6Ref.current?.scrollIntoView({ behavior: 'smooth' });
       }
     }
   
@@ -94,6 +100,42 @@ export default function Mobile( {projects, systemText} ) {
       let popup = document.querySelector('.popup .inner');
       if (popup.classList.contains('open')) { popup.classList.remove('open'); }
     }
+
+
+    const alert = useRef(null);
+    const openAlert = (alertText) => {
+      // Dimmed
+      let background = document.querySelector('.page');
+      if (!(background.classList.contains('dimmed'))) { background.classList.add('dimmed'); }
+  
+      // Open Popup
+      let alert = document.querySelector('.alert .inner');
+      if (!(alert.classList.contains('open'))) { alert.classList.add('open'); }
+  
+      let text = document.querySelector('.alert .inner .description .text');
+      text.innerHTML = alertText;
+    }
+    const closeAlert = () => {
+      let background = document.querySelector('.page');
+      if (background.classList.contains('dimmed')) { background.classList.remove('dimmed'); }
+      let alert = document.querySelector('.alert .inner');
+      if (alert.classList.contains('open')) { alert.classList.remove('open'); }
+    }
+    const sendEmail = () => {
+      if (email === '') {
+        openAlert(text.emailAlert);
+        // let emailInput = document.getElementById('email');
+        // emailInput.focus();
+      } else if (content === '') {
+        openAlert(text.contentAlert);
+        // let contentTextarea = document.getElementById('content');
+        // contentTextarea.focus();
+      } else {
+        openAlert(text.sendSuccess);
+        setEmail('');
+        setContent('');
+      }
+    }
   
     return (
       <div className='mobile'>
@@ -101,8 +143,8 @@ export default function Mobile( {projects, systemText} ) {
           <div className='contents'>
             <div className='localeArea'>
               <div className='inner'>
-                <a href={ (e) => e.preventDefault() } onClick={ () => changeLocale('ko') } className={ locale === 'ko' ? 'active' : '' }>KO</a>
-                <a href={ (e) => e.preventDefault() } onClick={ () => changeLocale('en') } className={ locale === 'en' ? 'active' : '' }>EN</a>
+                <Link to={ (e) => e.preventDefault() } onClick={ () => changeLocale('ko') } className={ locale === 'ko' ? 'active' : '' }>KO</Link>
+                <Link to={ (e) => e.preventDefault() } onClick={ () => changeLocale('en') } className={ locale === 'en' ? 'active' : '' }>EN</Link>
               </div>
             </div>
             <div className='leftArea'>
@@ -122,11 +164,12 @@ export default function Mobile( {projects, systemText} ) {
                 </div>
                 </div>
                 <div className="leftNavigation">
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(1) }>{ text.profile }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(2) }>{ text.workExperience }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(3) }>{ text.projects }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(4) }>{ text.skills }</a>
-                  <a href={ (e) => e.preventDefault() } onClick={ () => changeScroll(5) }>{ systemText.en.study }</a>
+                  <Link to={ (e) => e.preventDefault() } onClick={ () => changeScroll(1) }>{ text.profile }</Link>
+                  <Link to={ (e) => e.preventDefault() } onClick={ () => changeScroll(2) }>{ text.workExperience }</Link>
+                  <Link to={ (e) => e.preventDefault() } onClick={ () => changeScroll(3) }>{ text.projects }</Link>
+                  <Link to={ (e) => e.preventDefault() } onClick={ () => changeScroll(4) }>{ text.skills }</Link>
+                  <Link to={ (e) => e.preventDefault() } onClick={ () => changeScroll(5) }>{ systemText.en.study }</Link>
+                  <Link to={ (e) => e.preventDefault() } onClick={ () => changeScroll(6) }>{ text.contact }</Link>
                 </div>
               </div>
             </div>
@@ -157,7 +200,7 @@ export default function Mobile( {projects, systemText} ) {
                             <img src={ require('../images/CompanyLogo1.jpg') } alt={ text.ctkCosmetics } />
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</a>
+                          <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</Link>
                           <Link to='https://www.ctkcosmetics.com/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
@@ -166,7 +209,7 @@ export default function Mobile( {projects, systemText} ) {
                             <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip } />
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(2) }>{ text.viewProjects }</a>
+                          <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(2) }>{ text.viewProjects }</Link>
                           <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
@@ -176,7 +219,7 @@ export default function Mobile( {projects, systemText} ) {
                             <p>for Partner</p>
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(3) }>{ text.viewProjects }</a>
+                          <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(3) }>{ text.viewProjects }</Link>
                           <Link to='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
@@ -186,7 +229,7 @@ export default function Mobile( {projects, systemText} ) {
                             <p>for Admin</p>
                         </div>
                         <div className='hoverChange'>
-                          <a href={ (e) => e.preventDefault() } onClick={ () => openPopup(4) }>{ text.viewProjects }</a>
+                          <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(4) }>{ text.viewProjects }</Link>
                         </div>
                       </div>
                     </div>
@@ -298,6 +341,31 @@ export default function Mobile( {projects, systemText} ) {
                   </div>
                 </div>
               </div>
+              {/* Contact */}
+              <div className='each' ref={ location6Ref }>
+                <div className='mainTitle'>{ text.contact }</div>
+                <div className='eachInfo'>
+                  <div className='eachTitle'>
+                  <label htmlFor='email'>{ text.email }</label>
+                  </div>
+                  <div className='eachDesc'>
+                    <input name='email' id='email' value={ email } onChange={ (e) => setEmail(e.target.value) }  />
+                  </div>
+                </div>
+                <div className='eachInfo'>
+                  <div className='eachTitle'>
+                    <label htmlFor='content'>{ text.content }</label>
+                  </div>
+                  <div className='eachDesc'>
+                  <textarea name='content' id='content' value={ content } onChange={ (e) => setContent(e.target.value) }></textarea>
+                  </div>
+                </div>
+                <div className='eachInfo'>
+                  <div className='eachDesc'>
+                    <Link to={ (e) => e.preventDefault() }className='button' onClick={ () => sendEmail() }>{ text.sendEmail}</Link>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className='footer'>
                 <div className='footerLink'>
@@ -311,20 +379,20 @@ export default function Mobile( {projects, systemText} ) {
           <div className='popup' ref={ popup } onClick={ (e) => e.target === popup.current ? closePopup() : e.preventDefault() }>
             <div className='inner'>
               <div className='close'>
-                <a href={ (e) => e.preventDefault() } onClick={ () => closePopup() }>×</a>
+                <Link to={ (e) => e.preventDefault() } onClick={ () => closePopup() }>×</Link>
               </div>
               <div className='nav'>
                 {
                   CTKProject.map((project, key) => {
                     return (
-                      <a
-                        href={ (e) => e.preventDefault() }
+                      <Link
+                        to={ (e) => e.preventDefault() }
                         className={ `ctkProject${ key + 1 }` }
                         onClick={ () => openPopup(key + 1) }
                         key={ `ctkProject${ key + 1 }` }
                       >
                         { project.site }
-                      </a>
+                      </Link>
                     )
                   })
                 }
@@ -356,6 +424,16 @@ export default function Mobile( {projects, systemText} ) {
               </div>
             </div>
           </div>
+          <div className='alert' ref={ alert } onClick={ (e) => e.target === alert.current ? closeAlert() : e.preventDefault() }>
+          <div className='inner'>
+            <div className='close'>
+              <Link to={ (e) => e.preventDefault() } onClick={ () => closeAlert() }>×</Link>
+            </div>
+            <div className='description'>
+              <p className='text'></p>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
     )

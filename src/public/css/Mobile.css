@@ -19,7 +19,6 @@
     max-width: 100%;
     padding: 20px;
     position: relative;
-
     .localeArea {
       width: 100%;
 
@@ -101,147 +100,197 @@
         }
       }
     }
-  }
-  
-  
-  .contents .rightArea {
-    width: 100%;
-    padding: 0;
-    overflow-y: auto;
-    position: relative;
-  }
-  .contents .rightArea .each {
-    padding-top: 32px;
-    margin-top: 32px;
-  }
-  .contents .rightArea .each:first-child {
-    padding-top: 0;
-  }
-  .contents .rightArea .each .mainTitle {
-    font-size: 24px;
-    font-variation-settings: 'wght' 600;
-    padding: 8px 0;
-    border-bottom: 1px solid var(--grey);
-  }
-  .contents .rightArea .each .eachInfo {
-    padding-top: 4px;
-  }
-  .contents .rightArea .each .eachInfo:not(:first-child) {
-    margin-top: 16px;
-  }
-  .contents .rightArea .each:not(:nth-child(1)) .eachInfo:not(:nth-child(2)) {
-    margin-top: 32px;
-  }
-  .contents .rightArea .each .eachInfo .eachTitle {
-    flex-shrink: 0;
-    width: 100%;
-  }
-  .contents .rightArea .each .eachInfo .eachTitle p,
-  .contents .rightArea .each .eachInfo .eachTitle a {
-    font-size: 18px;
-    font-variation-settings: 'wght' 600;
-  }
-  .contents .rightArea .each .eachInfo .eachTitle a::after {
-    display: inline-flex;
-    content: '↗';
-    color: var(--yellow);
-    margin-left: 4px;
-    font-variation-settings: 'wght' 600;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc p {
-    padding-top: 8px;
-    span.bold {
-      font-variation-settings: 'wght' 600;
-      color: var(--pink);
+    .rightArea {
+      width: 100%;
+      padding: 0;
+      overflow-y: auto;
+      position: relative;
+      .each {
+        padding-top: 32px;
+        margin-top: 32px;
+        .mainTitle {
+          font-size: 24px;
+          font-variation-settings: 'wght' 600;
+          padding: 8px 0;
+          border-bottom: 1px solid var(--grey);
+        }
+        .eachInfo {
+          padding-top: 4px;
+          .eachTitle {
+            flex-shrink: 0;
+            width: 100%;
+            p, a {
+              font-size: 18px;
+              font-variation-settings: 'wght' 600;
+            }
+            a::after {
+              display: inline-flex;
+              content: '↗';
+              color: var(--yellow);
+              margin-left: 4px;
+              font-variation-settings: 'wght' 600;
+            }
+            label {
+              display: flex;
+              padding-top: 4px;
+            }
+          }
+          .eachDesc {
+            p {
+              padding-top: 8px;
+              span.bold {
+                font-variation-settings: 'wght' 600;
+                color: var(--pink);
+              }
+            }
+            p.skillSpan span {
+              display: inline-flex;
+              flex-wrap: wrap;
+              align-items: center;
+              font-size: 14px;
+              padding: 6px 4px;
+              margin: 1px 4px 1px 0;
+              border: 1px solid var(--pink);
+              border-radius: 12px;
+            }
+            input, textarea {
+              width: 100%;
+              color: var(--black);
+              background-color: var(--white);
+              border-radius: 4px;
+              padding: 6px 8px;
+              margin-top: 8px;
+            }
+            textarea {
+              aspect-ratio: 3;
+              outline: unset;
+            }
+            .linkContent {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
+              .eachLink {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                aspect-ratio: 3.5;
+                margin-top: 8px;
+                padding: 16px;
+                color: var(--black);
+                background-color: #FFFFFF;
+                border-radius: 8px;
+                transition: all 0.25s linear;
+                .imageArea, .hoverChange {
+                  width: 50%;
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  justify-content: center;
+                }
+                img {
+                  max-width: 100px;
+                  max-height: 40px;
+                  display: block;
+                }
+                p {
+                  width: 100%;
+                  padding: 0;
+                  margin-top: 4px;
+                  text-align: center;
+                  line-height: 1;
+                }
+                .hoverChange{
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  justify-content: center;
+                  a {
+                    display: block;
+                    width: 100%;
+                    font-size: 14px;
+                    text-align: center;
+                    padding: 4px;
+                    margin-top: 0;
+                    border: 1px solid var(--grey);
+                    color: var(--white);
+                    background-color: var(--black);
+                    font-variation-settings: 'wght' 600;
+                  }
+                  a:nth-child(2n) {
+                    margin-top: 4px;
+                  }
+                  a:after {
+                    display: inline-flex;
+                    content: '↗';
+                    color: var(--yellow);
+                    margin-left: 4px;
+                  }
+                  a:first-child:after {
+                    content: '↑';
+                  }
+                }
+              }  
+            }
+          }
+          .eachDesc:has(.button) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-grow: 1;
+            .button {
+              width: 100%;
+              text-align: center;
+              color: var(--pink);
+              font-variation-settings: 'wght' 600;
+              background-color: var(--black);
+              border: 1px solid var(--pink);
+              border-radius: 4px;
+              padding: 8px 16px;
+            }
+            .button:hover {
+              color: var(--black);
+              background-color: var(--pink);
+            }
+          }
+        }
+        .eachInfo:not(:first-child) {
+          margin-top: 16px;
+        }
+      }
+      .each:not(:nth-child(1)) {
+        .eachInfo:not(:nth-child(2)) {
+          margin-top: 32px;
+        }
+      }
+      .each:first-child {
+        padding-top: 0;
+        .eachInfo {
+          .eachDesc {
+            p {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+      .each:last-child {
+        .eachInfo, .eachInfo:not(:nth-child(2)) {
+          margin-top: 16px;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      margin: 100px 0 20px;
+      padding: 24px 0 0;
+      border-top: 1px solid var(--grey);
     }
   }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    aspect-ratio: 3.5;
-    margin-top: 8px;
-    padding: 16px;
-    color: var(--black);
-    background-color: #FFFFFF;
-    border-radius: 8px;
-    transition: all 0.25s linear;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .imageArea,
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .hoverChange {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink img {
-    max-width: 100px;
-    max-height: 40px;
-    display: block;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink p {
-    width: 100%;
-    padding: 0;
-    margin-top: 4px;
-    text-align: center;
-    line-height: 1;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .hoverChange{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .hoverChange a {
-    display: block;
-    width: 100%;
-    font-size: 14px;
-    text-align: center;
-    padding: 4px;
-    margin-top: 0;
-    border: 1px solid var(--grey);
-    color: var(--white);
-    background-color: var(--black);
-    font-variation-settings: 'wght' 600;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .hoverChange a:nth-child(2n) {
-    margin-top: 4px;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .hoverChange a:after {
-    display: inline-flex;
-    content: '↗';
-    color: var(--yellow);
-    margin-left: 4px;
-  }
-  .contents .rightArea .each .eachInfo .eachDesc .linkContent .eachLink .hoverChange a:first-child:after {
-    content: '↑';
-  }
-  .contents .rightArea .each .eachInfo .eachDesc p.skillSpan span {
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 14px;
-    padding: 6px 4px;
-    margin: 1px 4px 1px 0;
-    border: 1px solid var(--grey);
-    border-radius: 12px;
-  }
-  /* .contents .rightArea .each .eachInfo .eachDesc p.skillSpan span.active {
-    background-color: var(--grey);
-    color: var(--black);
-    font-variation-settings: 'wght' 600;
-  } */
-  
   
   
   .popup {
@@ -253,114 +302,143 @@
     height: 100vh;
     align-items: center;
     justify-content: center;
+    .inner {
+      width: 100%;
+      height: calc(100% - 80px);
+      padding: 20px;
+      color: #000000;
+      background-color: #FFFFFF;
+      border-radius: 12px 12px 0 0;
+      overflow-y: hidden;
+      .close {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: -10px;
+        a {
+          display: flex;
+          width: max-content;
+          padding: 12px 6px;
+          border-bottom: 2px solid transparent;
+          margin-right: 0;
+          font-variation-settings: 'wght' 600;
+          color: var(--grey);
+        }
+        a:not(:last-child) {
+          margin-right: 8px;
+        }
+        a:hover, a.active {
+          color: var(--black);
+          border-color: var(--black);
+        }
+      }
+      .projects {
+        margin-top: 16px;
+        padding: 0 0 32px 0;
+        max-height: calc(100% - 130px);
+        overflow-y: auto;
+        .eachProject {
+          display: none;
+          ul {
+            margin-top: 32px;
+            li {
+              display: flex;
+              align-items: flex-start;
+            }
+            li:nth-child(1) {
+              font-variation-settings: 'wght' 600;
+            }
+            li:nth-child(1):before {
+              content: 'Project';
+            }
+            li:nth-child(2):before {
+              content: 'Date';
+            }
+            li:nth-child(3):before {
+              content: 'Skills';
+            }
+            li:nth-child(4):before {
+              content: 'Role';
+            }
+            li:nth-child(5):before {
+              content: 'Contrib.';
+            }
+            li:nth-child(6):before {
+              content: 'Content';
+            }
+            li:before {
+              display: flex;
+              flex-shrink: 0;
+              align-items: center;
+              justify-content: center;
+              width: 60px;
+              background-color: var(--pink);
+              border-radius: 4px;
+              margin-top: 3px;
+              margin-right: 12px;
+              font-size: 12px;
+              font-variation-settings: 'wght' 400;
+            }
+          }
+          ul:first-child {
+            margin-top: 0;
+          }
+        }
+        .eachProject.active {
+          display: block;
+        }
+      }
+    }
   }
   .popup:has(.inner.open) {
     display: flex;
   }
-  .popup .inner {
-    width: 100%;
-    height: calc(100% - 80px);
-    padding: 20px;
-    color: #000000;
-    background-color: #FFFFFF;
-    border-radius: 12px 12px 0 0;
-    overflow-y: hidden;
-  }
-  .popup .inner .nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: -10px;
-  }
-  .popup .inner .close {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
-  .popup .inner .nav a {
-    display: flex;
-    width: max-content;
-    padding: 12px 6px;
-    border-bottom: 2px solid transparent;
-    margin-right: 0;
-    font-variation-settings: 'wght' 600;
-    color: var(--grey);
-  }
-  .popup .inner .nav a:not(:last-child) {
-    margin-right: 8px;
-  }
-  .popup .inner .nav a:hover,
-  .popup .inner .nav a.active {
-    color: var(--black);
-    border-color: var(--black);
-  }
-  .popup .inner .projects {
-    margin-top: 16px;
-    padding: 0 0 32px 0;
-    max-height: calc(100% - 130px);
-    overflow-y: auto;
-  }
-  .popup .inner .projects .eachProject {
+
+
+  .alert {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
     display: none;
-  }
-  .popup .inner .projects .eachProject.active {
-    display: block;
-  }
-  .popup .inner .projects .eachProject ul {
-    margin-top: 32px;
-  }
-  .popup .inner .projects .eachProject ul:first-child {
-    margin-top: 0;
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(1) {
-    font-variation-settings: 'wght' 600;
-  }
-  .popup .inner .projects .eachProject ul li {
-    display: flex;
-    align-items: flex-start;
-  }
-  .popup .inner .projects .eachProject ul li:last-child {
-  }
-  .popup .inner .projects .eachProject ul li:before {
-    display: flex;
-    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    background-color: var(--pink);
-    border-radius: 4px;
-    margin-top: 3px;
-    margin-right: 12px;
-    font-size: 12px;
-    font-variation-settings: 'wght' 400;
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(1):before {
-    content: 'Project';
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(2):before {
-    content: 'Date';
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(3):before {
-    content: 'Skills';
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(4):before {
-    content: 'Role';
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(5):before {
-    content: 'Contrib.';
-  }
-  .popup .inner .projects .eachProject ul li:nth-child(6):before {
-    content: 'Content';
-  }
 
+    .inner {
+      position: absolute;
+      bottom: 20px;
+      width: calc(100% - 20px);
+      max-width: 420px;
+      padding: 20px 20px 60px 20px;
+      color: var(--black);
+      background-color: var(--white);
+      border-radius: 12px;
 
+      .close {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
 
-  .contents .footer {
+      .description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .text {
+          padding-top: 18px;
+          font-size: 16px;
+          font-variation-settings: 'wght' 600;
+        }
+      }
+    }
+  }
+  .alert:has(.inner.open) {
     display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-    margin: 100px 0 20px;
-    padding: 24px 0 0;
-    border-top: 1px solid var(--grey);
   }
 }

@@ -142,9 +142,15 @@
               margin-left: 4px;
               font-variation-settings: 'wght' 600;
             }
+
+            label {
+              display: flex;
+              padding-top: 4px;
+            }
           }
   
           .eachDesc {
+            flex-grow: 1;
             p {
               padding-top: 8px;
               span.bold {
@@ -163,7 +169,7 @@
                 font-size: 14px;
                 padding: 6px 4px;
                 margin: 1px 4px 1px 0;
-                border: 1px solid var(--grey);
+                border: 1px solid var(--pink);
                 border-radius: 12px;
               }
               span.active {
@@ -249,9 +255,44 @@
                 }
               }
             }
+            input, textarea {
+              width: 100%;
+              color: var(--black);
+              background-color: var(--white);
+              border-radius: 4px;
+              padding: 6px 8px;
+            }
+            textarea {
+              aspect-ratio: 3;
+              outline: unset;
+            }
           }
-          .eachInfo:not(:first-child) {
-            margin-top: 8px;
+          .eachDesc:has(input, textarea) {
+            max-width: 100%;
+          }
+          .eachDesc:has(.button) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-grow: 1;
+            max-width: 100%;
+            padding-left: 200px;
+            
+            .button {
+              width: 100%;
+              text-align: center;
+              color: var(--pink);
+              font-variation-settings: 'wght' 600;
+              background-color: var(--black);
+              border: 1px solid var(--pink);
+              border-radius: 4px;
+              margin-top: -6px;
+              padding: 8px 16px;
+            }
+            .button:hover {
+              color: var(--black);
+              background-color: var(--pink);
+            }
           }
         }
         .eachInfo:not(:first-child) {
@@ -290,7 +331,7 @@
   }
   
   .popup {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     z-index: 100;
     display: none;
@@ -416,6 +457,46 @@
   .popup:has(.inner.open) {
     display: flex;
   }
+
+  .alert {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .inner {
+      width: 100%;
+      max-width: 420px;
+      padding: 20px 20px 60px 20px;
+      color: var(--black);
+      background-color: var(--white);
+      border-radius: 12px;
+
+      .close {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+      }
+
+      .description {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .text {
+          padding-top: 16px;
+          font-size: 20px;
+          font-variation-settings: 'wght' 600;
+        }
+      }
+    }
+  }
+  .alert:has(.inner.open) {
+    display: flex;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -493,6 +574,9 @@
               a::after {
                 margin-left: 0.31vw;
               }
+              label {
+                padding-top: 0.31vw;
+              }
             }
     
             .eachDesc {
@@ -507,7 +591,7 @@
                   font-size: 1.08vw;
                   padding: 0.46vw 0.31vw;
                   margin: 0.08vw 0.31vw 0.08vw 0;
-                  border: 0.08vw solid var(--grey);
+                  border: 0.08vw solid var(--pink);
                   border-radius: 0.92vw;
                 }
               }
@@ -540,9 +624,24 @@
               .linkContent:has(.eachLink) {
                 max-width: 420px;
               }
+              input, textarea {
+                font-size: 1.23vw;
+                border-radius: 0.31vw;
+                padding: 0.46vw 0.62vw;
+              } 
             }
-            .eachInfo:not(:first-child) {
-              margin-top: 0.62vw;
+            .eachDesc:has(input, textarea) {
+              max-width: 41.02vw;
+            }
+            .eachDesc:has(.button) {
+              padding-left: 15.38vw;
+              .button {
+                width: 41.02vw;
+                border: 0.08vw solid var(--pink);
+                border-radius: 0.31vw;
+                margin-top: -0.46vw;
+                padding: 0.62vw 1.23vw;
+              }
             }
           }
           .eachInfo:not(:first-child) {
@@ -567,9 +666,6 @@
         padding: 0 7.69vw;
       }
     }
-    
-  
-  
     
   
     .popup {
@@ -620,6 +716,22 @@
         }
       }
     }
+
+
+    .alert {
+      .inner {
+        max-width: 32.31vw;
+        padding: 1.54vw 1.54vw 4.62vw 1.54vw;
+        border-radius: 0.92vw;
+
+        .description {
+          .text {
+            padding-top: 1.23vw;
+            font-size: 1.54vw;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -652,8 +764,6 @@
     }
 
     .popup {
-      position: fixed;
-
       .inner {
         width: calc(95%);
         min-width: unset;
@@ -751,6 +861,9 @@
               a::after {
                 margin-left: 2px;
               }
+              label {
+                padding-top: 2px;
+              }
             }
     
             .eachDesc {
@@ -765,7 +878,7 @@
                   font-size: 8px;
                   padding: 4px 2px;
                   margin: 1px 2px 1px 0;
-                  border: 1px solid var(--grey);
+                  border: 1px solid var(--pink);
                   border-radius: 7px;
                 }
               }
@@ -795,9 +908,24 @@
                   }
                 }
               }
+              input, textarea {
+                font-size: 12px;
+                border-radius: 2px;
+                padding: 4px 5px;
+              } 
             }
-            .eachInfo:not(:first-child) {
-              margin-top: 5px;
+            .eachDesc:has(input, textarea) {
+              max-width: 420px;
+            }
+            .eachDesc:has(.button) {
+              padding-left: 118px;
+              .button {
+                width: 420px;
+                border: 1px solid var(--pink);
+                border-radius: 2px;
+                margin-top: -4px;
+                padding: 5px 9px;
+              }
             }
           }
           .eachInfo:not(:first-child) {
@@ -860,6 +988,21 @@
         }
         .projects::-webkit-scrollbar {
           width: 2px;
+        }
+      }
+    }
+
+    .alert {
+      .inner {
+        max-width: 248px;
+        padding: 12px 12px 35px 12px;
+        border-radius: 7px;
+
+        .description {
+          .text {
+            padding-top: 9px;
+            font-size: 12px;
+          }
         }
       }
     }
