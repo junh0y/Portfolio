@@ -327,7 +327,15 @@ export default function Mobile( {projects, systemText} ) {
                   <div className='eachDesc'>
                     <p>{ text.kosmoDate }</p>
                     <p>{ text.kosmoDesc }</p>
-                    <p>{ 'HTML, CSS, Javascript, Java, Spring, React, Android' }</p>
+                    <p className='skillSpan'>
+                      <span>HTML</span>
+                      <span>CSS</span>
+                      <span>Javascript</span>
+                      <span>JAVA</span>
+                      <span>Spring</span>
+                      <span>React</span>
+                      <span>Android</span>
+                    </p>
                   </div>
                 </div>
                 <div className='eachInfo'>

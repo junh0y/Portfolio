@@ -95,6 +95,9 @@ export default function PC( {projects, systemText} ) {
         projectContent[j].classList.remove('active');
       }
     }
+
+    const projects = document.querySelector('.popup .inner .projects');
+    projects.scrollTop = 0;
   };
 
   const closePopup = () => {
