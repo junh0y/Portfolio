@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useRef } from 'react';
 import '../public/css/Mobile.css';
 import { Link } from 'react-router-dom';
-
+import emailJs from '@emailjs/browser';
 
 
 export default function Mobile( {projects, systemText} ) {
@@ -13,6 +13,7 @@ export default function Mobile( {projects, systemText} ) {
   let text = systemText[locale];
   let CTKProject = projects[locale];
 
+  // 언어 변경
   const changeLocale = (language) => {
     setLocale(language);
     document.documentElement.lang = language;
@@ -20,122 +21,165 @@ export default function Mobile( {projects, systemText} ) {
     CTKProject = projects[language];
   }
 
-    const location1Ref = useRef();
-    const location2Ref = useRef();
-    const location3Ref = useRef();
-    const location4Ref = useRef();
-    const location5Ref = useRef();
-    const location6Ref = useRef();
-  
-    const popup = useRef(null);
-  
-    const changeScroll = (location) => {
-      if (location === 1) {
-        location1Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      } else if (location === 2) {
-        location2Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      } else if (location === 3) {
-        location3Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      } else if (location === 4) {
-        location4Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      } else if (location === 5) {
-        location5Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      } else if (location === 6) {
-        location6Ref.current?.scrollIntoView({ behavior: 'smooth' });
-      }
+  // 스크롤 이벤트
+  const location1Ref = useRef();
+  const location2Ref = useRef();
+  const location3Ref = useRef();
+  const location4Ref = useRef();
+  const location5Ref = useRef();
+  const location6Ref = useRef();
+  const changeScroll = (location) => {
+    if (location === 1) {
+      location1Ref.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (location === 2) {
+      location2Ref.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (location === 3) {
+      location3Ref.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (location === 4) {
+      location4Ref.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (location === 5) {
+      location5Ref.current?.scrollIntoView({ behavior: 'smooth' });
+    } else if (location === 6) {
+      location6Ref.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  
-    const activeSkills = (project) => {
-      const skills = document.getElementsByClassName('skill');
-  
-      for (let i = 0 ; i < skills.length ; i++) {
-        if (skills[i].classList.contains('project' + project)) {
-          skills[i].classList.add('active');
-        } else {
-          skills[i].classList.remove('active');
-        }
-      }
-    };
-  
-    const inactiveSkills = () => {
-      const skills = document.getElementsByClassName('skill');
-      for (let i = 0 ; i < skills.length ; i++) {
+  }
+
+
+  // 스킬 이벤트
+  const activeSkills = (project) => {
+    const skills = document.getElementsByClassName('skill');
+
+    for (let i = 0 ; i < skills.length ; i++) {
+      if (skills[i].classList.contains('project' + project)) {
+        skills[i].classList.add('active');
+      } else {
         skills[i].classList.remove('active');
       }
-    };
-  
-    const openPopup = (popupProject) => {
-      // Dimmed
-      let background = document.querySelector('.page');
-      if (!(background.classList.contains('dimmed'))) { background.classList.add('dimmed'); }
-  
-      // Open Popup
-      let popup = document.querySelector('.popup .inner');
-      if (!(popup.classList.contains('open'))) { popup.classList.add('open'); }
-  
-      // Activate the Project
-      let projectNav = document.querySelectorAll('.popup .nav a');
-      let projectContent = document.querySelectorAll('.popup .projects .eachProject');
-  
-      for (let i = 0 ; i < projectNav.length ; i++) {
-        if (projectNav[i].classList.contains('ctkProject' + popupProject)) {
-          projectNav[i].classList.add('active');
-        } else {
-          projectNav[i].classList.remove('active');
-        }
-      }
-  
-      for (let j = 0 ; j < projectContent.length ; j++) {
-        if (projectContent[j].classList.contains('ctkProject' + popupProject)) {
-          projectContent[j].classList.add('active');
-        } else {
-          projectContent[j].classList.remove('active');
-        }
-      }
-    };
-  
-    const closePopup = () => {
-      let background = document.querySelector('.page');
-      if (background.classList.contains('dimmed')) { background.classList.remove('dimmed'); }
-      let popup = document.querySelector('.popup .inner');
-      if (popup.classList.contains('open')) { popup.classList.remove('open'); }
     }
+  };
+  const inactiveSkills = () => {
+    const skills = document.getElementsByClassName('skill');
+    for (let i = 0 ; i < skills.length ; i++) {
+      skills[i].classList.remove('active');
+    }
+  };
 
 
-    const alert = useRef(null);
-    const openAlert = (alertText) => {
-      // Dimmed
-      let background = document.querySelector('.page');
-      if (!(background.classList.contains('dimmed'))) { background.classList.add('dimmed'); }
-  
-      // Open Popup
-      let alert = document.querySelector('.alert .inner');
-      if (!(alert.classList.contains('open'))) { alert.classList.add('open'); }
-  
-      let text = document.querySelector('.alert .inner .description .text');
-      text.innerHTML = alertText;
-    }
-    const closeAlert = () => {
-      let background = document.querySelector('.page');
-      if (background.classList.contains('dimmed')) { background.classList.remove('dimmed'); }
-      let alert = document.querySelector('.alert .inner');
-      if (alert.classList.contains('open')) { alert.classList.remove('open'); }
-    }
-    const sendEmail = () => {
-      if (email === '') {
-        openAlert(text.emailAlert);
-        // let emailInput = document.getElementById('email');
-        // emailInput.focus();
-      } else if (content === '') {
-        openAlert(text.contentAlert);
-        // let contentTextarea = document.getElementById('content');
-        // contentTextarea.focus();
+  // 팝업 (프로젝트)
+  const popup = useRef(null);
+  const openPopup = (popupProject) => {
+    // Dimmed
+    let background = document.querySelector('.page');
+    if (!(background.classList.contains('dimmed'))) { background.classList.add('dimmed'); }
+
+    // Open Popup
+    let popup = document.querySelector('.popup .inner');
+    if (!(popup.classList.contains('open'))) { popup.classList.add('open'); }
+
+    // Activate the Project
+    let projectNav = document.querySelectorAll('.popup .nav a');
+    let projectContent = document.querySelectorAll('.popup .projects .eachProject');
+
+    for (let i = 0 ; i < projectNav.length ; i++) {
+      if (projectNav[i].classList.contains('ctkProject' + popupProject)) {
+        projectNav[i].classList.add('active');
       } else {
-        openAlert(text.sendSuccess);
-        setEmail('');
-        setContent('');
+        projectNav[i].classList.remove('active');
       }
     }
+
+    for (let j = 0 ; j < projectContent.length ; j++) {
+      if (projectContent[j].classList.contains('ctkProject' + popupProject)) {
+        projectContent[j].classList.add('active');
+      } else {
+        projectContent[j].classList.remove('active');
+      }
+    }
+  };
+  const closePopup = () => {
+    let background = document.querySelector('.page');
+    if (background.classList.contains('dimmed')) { background.classList.remove('dimmed'); }
+    let popup = document.querySelector('.popup .inner');
+    if (popup.classList.contains('open')) { popup.classList.remove('open'); }
+  }
+
+
+  // 팝업 (알림)
+  const alert = useRef(null);
+  const openAlert = (alertText, type) => {
+    // Dimmed
+    let background = document.querySelector('.page');
+    if (!(background.classList.contains('dimmed'))) { background.classList.add('dimmed'); }
+
+    // Open Popup
+    let alert = document.querySelector('.alert .inner');
+    if (!(alert.classList.contains('open'))) { alert.classList.add('open'); }
+
+    // 문구 변경
+    let text = document.querySelector('.alert .inner .description .text');
+    text.innerHTML = alertText;
+
+    // 아이콘 변경
+    let error = document.querySelector('.alert .inner .description svg.error');
+    let success = document.querySelector('.alert .inner .description svg.success');
+    if (type === 'error') {
+      error.classList.add('active');
+      success.classList.remove('active');
+    } else {
+      error.classList.remove('active');
+      success.classList.add('active');
+    }
+  }
+  const closeAlert = () => {
+    let background = document.querySelector('.page');
+    if (background.classList.contains('dimmed')) { background.classList.remove('dimmed'); }
+    let alert = document.querySelector('.alert .inner');
+    if (alert.classList.contains('open')) { alert.classList.remove('open'); }
+  }
+
+
+  // 이메일 발송
+  const [emailState, setEmailState] = useState(true);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    let button = document.querySelector('.button');
+    button.classList.add('active');
+    
+    console.log('dasdasdasd');
+
+    if (email === '') {
+      openAlert(text.emailAlert, 'error');
+      button.classList.remove('active');
+    } else if (content === '') {
+      openAlert(text.contentAlert, 'error');
+      button.classList.remove('active');
+    } else {
+      if (emailState) {
+        setEmailState(false);
+        emailJs.send('service_w0xo31a', 'template_6ykbijl', {
+          'email': email,
+          'message': content,
+        }, {
+          publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+        })
+        .then(
+          () => {
+            setEmail('');
+            setContent('');
+            setEmailState(true);
+            openAlert(text.sendSuccess, 'success');
+            button.classList.remove('active');
+          },
+          (error) => {
+            console.log('FAILED...', error);
+            setEmailState(true);
+            button.classList.remove('active');
+          },
+        );
+      }
+
+    }
+  }
   
     return (
       <div className='mobile'>
@@ -154,11 +198,15 @@ export default function Mobile( {projects, systemText} ) {
                   <h2>{ text.frontEndDevloper }</h2>
                   <div>
                     <p>
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARRJREFUSEvtlLFOwzAURc/9CgaGAoIFhJAYixi7deRz2PmZrmxsFUxILC0SQoJ26NCveMiRE6XBjZ8R3eolSvR8jp99HbHjoR3zcQvM7AB4BAwYS1p7FucSRPgLcBKhX8DQI8kKInwKnAHLKBgAn8BtTtIr6Kx8BdxEwTNwCGQ72SpIwSVVHZhZ6MAlSQr64PXBeiW/BB54iWRDUAL3ShpBJy1h/rGkhSfrZnYEfMfajXRVAjMLzzfgqgZKyka4LTezcAHrMZN0GV7aglfg+p8ET5JGjSC1kr920J2XSlHV6l7QnGU3hnUa9lvUt0Vz4NxzgxM175Iu2t9TMb0DHoDTQskHcC9p0isohGbLi/43WVqi4AcdgqsZWC8YwQAAAABJRU5ErkJggg==" alt={ text.address } />
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path>
+                      </svg>
                       { text.myAddress }
                     </p>
                     <p>
-                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXVJREFUSEvdlS9IZFEUxn8fIgaDySALghh0w/YtNuOCMFoVbIJJMLhlkU0KgmnBtuDW3bWIyWYxa9AkowgGk8Egsn7rGe6TmdF5vpnHlLnlhnPv+Z3vO/eP6PJQl/PTQwDbM8AGMFnStjNgVdJB5HmxyPY18KFk8mz7haTxZoBT9KOk805AtkN9KEBSrfh6BRngHliQ9LcdiO0KsAsMvgfI8m4Ba5L+5YFs96Xerdavy1OwCOwAA8ARMCvp9i2I7WHgDzAFPABLwM9cBUG2/QnYB0aBG6Ai6bgeYvszEDaOAFfAF0mntmtWt1SQBWwPAb+BaeARWJH0IzbbXga2gX7gEJiTdJdixQBpcRyCdeBbqv5XmufTHLHvITpTV1hBkx2hItSEqhhRbVQd1TeMjgBJzRiw96zmKfWk2qLxxS1q5x6UsqgdUMcWFYXkAS7TuS+aK29dVVL0rOEtiud6E5goSTh5vtVfXz3XJZO23N5DX2a3LPoPOrOrGWF3AyAAAAAASUVORK5CYII=" alt={ text.email }/>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                        <path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path>
+                      </svg>
                       { text.myEmail }
                     </p>
                 </div>
@@ -370,7 +418,12 @@ export default function Mobile( {projects, systemText} ) {
                 </div>
                 <div className='eachInfo'>
                   <div className='eachDesc'>
-                    <Link to={ (e) => e.preventDefault() }className='button' onClick={ () => sendEmail() }>{ text.sendEmail}</Link>
+                    <Link className='button' onClick={ (e) => sendEmail(e) }>
+                      <span>
+                        { text.sendEmail }
+                      </span>
+                      <svg className='svg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22c5.421 0 10-4.579 10-10h-2c0 4.337-3.663 8-8 8s-8-3.663-8-8c0-4.336 3.663-8 8-8V2C6.579 2 2 6.58 2 12c0 5.421 4.579 10 10 10z"></path></svg>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -438,6 +491,12 @@ export default function Mobile( {projects, systemText} ) {
               <Link to={ (e) => e.preventDefault() } onClick={ () => closeAlert() }>×</Link>
             </div>
             <div className='description'>
+              <svg className='error' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M11.953 2C6.465 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.493 2 11.953 2zM13 17h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+              </svg>
+              <svg className='success' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>
+              </svg>
               <p className='text'></p>
             </div>
           </div>

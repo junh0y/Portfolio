@@ -74,7 +74,7 @@
             p {
               display: flex;
               align-items: center;
-              img {
+              img, svg {
                 width: 18px;
                 aspect-ratio: 1;
                 margin-right: 4px;
@@ -262,10 +262,23 @@
               border: 1px solid var(--pink);
               border-radius: 4px;
               padding: 8px 16px;
+              svg {
+                display: none;
+                width: 24px;
+                aspect-ratio: 1;
+                fill: var(--black);
+                animation: rotateImage 1s linear infinite; transform-origin: 50% 50%;
+              }
             }
-            .button:hover {
+            .button.active {
               color: var(--black);
               background-color: var(--pink);
+              span {
+                display: none;
+              }
+              svg {
+                display: block;
+              }
             }
           }
         }
@@ -442,8 +455,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top: 18px;
+        svg {
+          width: 24px;
+          aspect-ratio: 1;
+          margin-right: 4px;
+        }
+        .error.active, .success.active {
+          display: block;
+        }
+        .error {
+          display: none;
+          fill: #E71D36;
+        }
+        .success {
+          display: none;
+          fill: #3F51B5;
+        }
         .text {
-          padding-top: 18px;
           font-size: 16px;
           font-variation-settings: 'wght' 600;
         }
