@@ -310,7 +310,8 @@
     .footer {
       display: flex;
       flex-wrap: wrap;
-      align-items: end;
+      align-items: center;
+      justify-content: center;
       margin: 100px 0 20px;
       padding: 24px 0 0;
       border-top: 1px solid var(--grey);
