@@ -2,7 +2,7 @@
   .page {
     position: relative;
     width: 100%;
-    height: 100vh
+    height: 100vh;
   }
   .page.dimmed::before {
     position: absolute;
@@ -358,7 +358,7 @@
       width: 50%;
       min-width: 768px;
       height: calc(100vh - 200px);
-      padding: 20px 40px 40px 40px;
+      padding: 40px;
       color: #000000;
       background-color: #FFFFFF;
       border-radius: 12px;
@@ -367,7 +367,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        margin-top: -10px;
+        margin-top: -35px;
 
         a {
           display: flex;
@@ -391,6 +391,11 @@
         display: flex;
         align-items: center;
         justify-content: end;
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: var(--black);
+        }
       }
 
       .projects {
@@ -494,6 +499,11 @@
         display: flex;
         align-items: center;
         justify-content: end;
+        svg {
+          width: 24px;
+          height: 24px;
+          fill: var(--black);
+        }
       }
 
       .description {
@@ -718,11 +728,17 @@
       .inner {
         min-width: 59.08vw;
         height: calc(100vh - 15.38vw);
-        padding: 1.54vw 3.08vw 3.08vw 3.08vw;
+        padding: 3.08vw;
         border-radius: 0.92vw;
-  
+        .close {
+          svg {
+            width: 1.85vw;
+            height: 1.85vw;
+            fill: var(--black);
+          }
+        }
         .nav {
-          margin-top: -0.77vw;
+          margin-top: -2.69vw;
   
           a {
             padding: 0.92vw 0.46vw;
@@ -737,7 +753,7 @@
         .projects {
           margin-top: 1.23vw;
           padding: 0 0 2.46vw 0;
-          max-height: calc(100% - 70.31vw);
+          max-height: calc(100% - 5.69vw);
   
           .eachProject {
             ul {
@@ -769,7 +785,13 @@
         max-width: 32.31vw;
         padding: 1.54vw 1.54vw 4.62vw 1.54vw;
         border-radius: 0.92vw;
-        
+        .close {
+          svg {
+            width: 1.85vw;
+            height: 1.85vw;
+            fill: var(--black);
+          }
+        }
         .description {
           padding-top: 1.23vw;
           svg {
@@ -843,6 +865,7 @@
     .popup {
       .inner {
         width: calc(95%);
+        max-width: 768px;
         min-width: unset;
         font-size: 12px;
         .projects {
@@ -868,7 +891,7 @@
     font-size: 12px;
     .contents {
       max-width: 851px;
-      padding: 0 52px;
+      padding: 0 40px;
   
       .localeArea {
         
@@ -1035,11 +1058,17 @@
       .inner {
         min-width: 454px;
         height: calc(100vh - 118px);
-        padding: 12px 24px 24px 24px;
+        padding: 24px;
         border-radius: 7px;
-  
+        .close {
+          svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--black);
+          }
+        }
         .nav {
-          margin-top: -6px;
+          margin-top: -24px;
   
           a {
             padding: 7px 4px;
@@ -1054,7 +1083,7 @@
         .projects {
           margin-top: 9px;
           padding: 0 0 19px 0;
-          max-height: calc(100% - 72px);
+          max-height: calc(100% - 32px);
   
           .eachProject {
             ul {
@@ -1086,7 +1115,13 @@
         padding: 12px 12px 35px 12px;
         border-radius: 7px;
         padding-top: 9px;
-
+        .close {
+          svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--black);
+          }
+        }
         .description {
           svg {
             width: 14px;

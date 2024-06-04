@@ -443,7 +443,11 @@ export default function PC({ projects, systemText }) {
         <div className='popup' ref={ popup } onClick={ (e) => e.target === popup.current ? closePopup() : e.preventDefault() }>
           <div className='inner'>
             <div className='close'>
-              <Link to={ (e) => e.preventDefault() } onClick={ () => closePopup() }>×</Link>
+              <Link to={ (e) => e.preventDefault() } onClick={ () => closePopup() }>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                </svg>
+              </Link>
             </div>
             <div className='nav'>
               {
@@ -495,7 +499,11 @@ export default function PC({ projects, systemText }) {
         <div className='alert' ref={ alert } onClick={ (e) => e.target === alert.current ? closeAlert() : e.preventDefault() }>
           <div className='inner'>
             <div className='close'>
-              <Link to={ (e) => e.preventDefault() } onClick={ () => closeAlert() }>×</Link>
+              <Link to={ (e) => e.preventDefault() } onClick={ () => closeAlert() }>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+                </svg>
+              </Link>
             </div>
             <div className='description'>
               <svg className='error' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

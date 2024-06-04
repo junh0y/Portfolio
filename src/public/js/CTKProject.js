@@ -244,7 +244,7 @@ const Projects = {
                     "languages": 'HTML, CSS, Javascript, jQuery, PHP, Laravel',
                     "role": 'Front-end',
                     "contribution": '100%',
-                    "description": '· UI & UX developed <br/>· Developed the function for saving an inquiry and sending an inquiry email.'
+                    "description": '· Developed UI & UX <br/>· Developed the function for saving an inquiry and sending an inquiry email.'
                 },
                 {
                     "title": 'Renewal the service for MOQ1000 (3rd)',
@@ -252,7 +252,7 @@ const Projects = {
                     "languages": 'HTML, CSS, Javascript, jQuery, Bootstrap, PHP, Laravel',
                     "role": 'Front-end',
                     "contribution": '50%',
-                    "description": '· UI & UX developed <br/>· Developed the function for user\'s order management'
+                    "description": '· Developed UI & UX <br/>· Developed the function for user\'s order management'
                 },
                 {
                     "title": 'Development the service for Custom packaging',
