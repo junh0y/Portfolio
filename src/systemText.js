@@ -47,6 +47,11 @@ const systemText = {
         'frontEnd': '프론트엔드',
         'backEnd': '백엔드',
         'others': '기타',
+        'languages': '언어',
+        'korean': '한국어 (원어민)',
+        'english': '영어 (중급)',
+        'englishExtra1': '· 전시회 고객 응대 (코스모프로프 2019, 2022)',
+        'englishExtra2': '· 외부 API 관련 이메일 소통',
 
         'kosmo': '한국소프트웨어인재개발원',
         'kosmoDate': '2021.09 - 2022.03',
@@ -105,6 +110,11 @@ const systemText = {
         'frontEnd': 'Front-end',
         'backEnd': 'Back-end',
         'others': 'Others',
+        'languages': 'Langauges',
+        'korean': 'Korean (Native)',
+        'english': 'English (Intermediate)',
+        'englishExtra1': '· Handled customer service at exhibitions (Cosmoprof 2019, 2022)',
+        'englishExtra2': '· Communicated via email regarding external APIs',
 
         'kosmo': 'KOSMO',
         'kosmoDate': 'SEP 2021 - MAR 2022',

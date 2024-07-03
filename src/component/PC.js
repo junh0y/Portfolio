@@ -367,6 +367,19 @@ export default function PC({ projects, systemText }) {
                   <p>{ 'Gitlab, Slack' }</p>
                 </div>
               </div>
+              <div className='eachInfo'>
+                <div className='eachTitle'>
+                  <p>{ text.languages }</p>
+                </div>
+                <div className='eachDesc'>
+                  <p>{ text.korean }</p>
+                  <p>{ text.english }</p>
+                  <ul className='extra'>
+                    <li>{ text.englishExtra1 }</li>
+                    <li>{ text.englishExtra2 }</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             {/* Study */}
             <div className='each' ref={ location5Ref }>

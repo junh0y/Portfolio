@@ -270,6 +270,7 @@ body {
   --pink: #EFD5C0;
   --grey: #E4E2DA;
   --white: #F9F9F9;
+  --white2: #FFFFFF;
 
   margin: 0;
   background-color: var(--black);
@@ -277,4 +278,8 @@ body {
 }
 body:has(.page.dimmed) {
   overflow: hidden;
+}
+body:has(.cv) {
+  background-color: var(--white2);
+  color: var(--black);
 }

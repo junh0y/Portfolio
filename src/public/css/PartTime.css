@@ -1,0 +1,75 @@
+.cv {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    .header {
+        text-align: center;
+        h1 {
+            font-size: 24px;
+            font-variation-settings: 'wght' 600;
+        }
+        p {
+            margin-top: 8px;
+        }
+    }
+    .content {
+        margin-top: 24px;
+        .each {
+            .title {
+                font-size: 20px;
+                font-variation-settings: 'wght' 600;
+                padding-bottom: 8px;
+                border-bottom: 1px solid var(--black);
+            }
+            .description {
+                padding-bottom: 8px;
+                .eachDescription {
+                    margin-top: 16px;
+                    .main {
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-between;
+                        padding-top: 8px;
+                        span {
+                            display: inline-flex;
+                        }
+                        .info {
+                            display: flex;
+                            align-items: flex-end;
+                            span:first-child {
+                                font-size: 18px;
+                                font-variation-settings: 'wght' 500;
+                            }
+                            span:not(:first-child) {
+                                flex-shrink: 0;
+                                margin-left: 16px;
+                            }
+                        }
+                        .date {
+                            display: flex;
+                            span:last-child {
+                                justify-content: end;
+                                width: 180px;
+                            }
+                        }
+                    }
+                    .sub {
+                        ul {
+                            li {
+                                list-style: disc;
+                                margin-left: 18px;
+                                padding-top: 8px;
+                            }
+                        }
+                    }
+                }
+                .eachDescription:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        .each:not(:first-child) {
+            margin-top: 16px;
+        }
+    }
+}
