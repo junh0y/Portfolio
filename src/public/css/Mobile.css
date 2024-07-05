@@ -314,9 +314,26 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
+      flex: 0 0 100%;
       margin: 100px 0 20px;
       padding: 24px 0 0;
       border-top: 1px solid var(--grey);
+      .footerLink {
+        text-align: center;
+        padding-bottom: 8px;
+        .linkArea {
+          a {
+            svg {
+              width: 28px;
+              aspect-ratio: 1;
+              fill: var(--white);
+            }
+            svg.w32 {
+              width: 32px;
+            }
+          }
+        }
+      }
     }
   }
   

@@ -334,13 +334,29 @@
     .rightArea:hover::-webkit-scrollbar-thumb {
       background-color: var(--grey);
     }
+
     .footer {
-      flex: 0 1 100%;
+      /* flex: 0 1 100%;
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-      flex-wrap: wrap;
+      flex-wrap: wrap; */
       height: 160px;
+      .footerLink {
+        padding-bottom: 8px;
+        .linkArea {
+          a {
+            svg {
+              width: 28px;
+              aspect-ratio: 1;
+              fill: var(--white);
+            }
+            svg.w32 {
+              width: 32px;
+            }
+          }
+        }
+      }
     }
   }
   
@@ -720,6 +736,19 @@
       }
       .footer {
         height: 12.31vw;
+        .footerLink {
+          padding-bottom: 0.62vw;
+          .linkArea {
+            a {
+              svg {
+                width: 2.15vw;
+              }
+              svg.w32 {
+                width: 2.46vw;
+              }
+            }
+          }
+        }
       }
     }
     
@@ -1051,6 +1080,19 @@
         }
       }
       .footer {
+        .footerLink {
+          padding-bottom: 5px;
+          .linkArea {
+            a {
+              svg {
+                width: 18px;
+              }
+              svg.w32 {
+                width: 20px;
+              }
+            }
+          }
+        }
       }
     }
     
