@@ -94,7 +94,7 @@ const systemText = {
 
         'ctkDate': 'APR 2022 - APR 2024',
         'ctkRole': 'Front-end Developer / Assistant Manager',
-        'ctkDescription': '· Developed and maintained 3 sites with PHP(Laravel) & 1 site with vue.js <br />· Planned, developed and maintained an ingredients screening page',
+        'ctkDescription': '· Developed and maintained web applications using PHP, Laravel, and vue.js <br />· Collaborated with UI/UX designers to enhance user experience <br />· Developed regulatory screening functionality as a full-stack developer (planning, database design, API development) <br />· Communicated in English via email regarding external APIs and handled customer interactions in English at exhibitions <br />· Managed development outsourcing vendors',
 
         'innerbottle': 'Innerbottle',
         'innerbottleDate': 'JUN 2019 - JUN 2021',

@@ -39,8 +39,8 @@ function Developer() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Developed and maintained web applications using PHP, Laravel, and vue.js.</li>
-                                    <li>Collaborated with UI/UX designers to enhance user experience.</li>
+                                    <li>Developed and maintained web applications using PHP, Laravel, and vue.js</li>
+                                    <li>Collaborated with UI/UX designers to enhance user experience</li>
                                     <li>Developed regulatory screening functionality as a full-stack developer (planning, database design, API development)</li>
                                     <li>Communicated in English via email regarding external APIs and handled customer interactions in English at exhibitions</li>
                                     <li>Managed development outsourcing vendors</li>

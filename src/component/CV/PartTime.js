@@ -76,11 +76,11 @@ function PartTime() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Prepared a variety of brunch dishes, including hash browns, eggs, sausages, bacon, pancakes, french toast, waffles, and more.</li>
-                                    <li>Crafted various beverages such as coffee, shakes, ades, and teas.</li>
-                                    <li>Handled customer orders and provided efficient table service.</li>
-                                    <li>Worked across all shifts, including opening, midday, and closing.</li>
-                                    <li>Utilized English regularly to communicate with a predominantly international customer base.</li>
+                                    <li>Prepared a variety of brunch dishes, including hash browns, eggs, sausages, bacon, pancakes, french toast, waffles, and more</li>
+                                    <li>Crafted various beverages such as coffee, shakes, ades, and teas</li>
+                                    <li>Handled customer orders and provided efficient table service</li>
+                                    <li>Worked across all shifts, including opening, midday, and closing</li>
+                                    <li>Utilized English regularly to communicate with a predominantly international customer base</li>
                                 </ul>
                             </div>
                         </div>
@@ -97,8 +97,8 @@ function PartTime() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Developed and maintained web applications using PHP, Laravel, and vue.js.</li>
-                                    <li>Collaborated with UI/UX designers to enhance user experience.</li>
+                                    <li>Developed and maintained web applications using PHP, Laravel, and vue.js</li>
+                                    <li>Collaborated with UI/UX designers to enhance user experience</li>
                                 </ul>
                             </div>
                         </div>
@@ -115,9 +115,9 @@ function PartTime() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Planned and designed eco-friendly cosmetic packaging.</li>
-                                    <li>Managed production processes and developed manufacturing technologies.</li>
-                                    <li>Conducted compatability testing and performed quality control tasks.</li>
+                                    <li>Planned and designed eco-friendly cosmetic packaging</li>
+                                    <li>Managed production processes and developed manufacturing technologies</li>
+                                    <li>Conducted compatability testing and performed quality control tasks</li>
                                 </ul>
                             </div>
                         </div>
