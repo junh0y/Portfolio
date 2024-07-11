@@ -2,6 +2,7 @@ const systemText = {
     ko: {
         'myName': '양준형',
         'frontEndDevloper': '프론트엔드 개발자',
+        'fullStackDevloper': '풀스택 개발자',
         'about': '소개',
         'profile': '프로필',
         'workExperience': '경력사항',
@@ -16,7 +17,7 @@ const systemText = {
         'myPhone': '010-9164-1201',
         'email': '이메일',
         'myEmail': 'y.junh0y@gmail.com',
-        'aboutMe': '안녕하세요. 프론트엔드 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">프론트엔드</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 프론트엔드뿐만 아니라 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span> 업무도 담당했습니다.',
+        'aboutMe': '안녕하세요. 풀스택 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">풀스택</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span>을 리딩하는 업무도 담당했습니다.',
         'content': '내용',
         'sendEmail': '이메일 발송',
         'emailAlert': '이메일 주소를 입력하세요.',
@@ -30,7 +31,7 @@ const systemText = {
         'forAdmin': '어드민 사이트',
 
         'ctkDate': '2022.04 - 2024.04',
-        'ctkRole': '프론트엔드 개발자 / 매니저',
+        'ctkRole': '풀스택 개발자 / 매니저',
         'ctkDescription': '· 플랫폼 사이트 개발 및 유지보수 (PHP, Laravel) </br>· 플랫폼 파트너 사이트 개발 및 유지보수 (vue.js) <br/>· 성분 스크리닝 페이지 기획 및 개발',
 
         'innerbottle': '이너보틀',
@@ -65,6 +66,7 @@ const systemText = {
     en: {
         'myName': 'Jun Hyeong Yang',
         'frontEndDevloper': 'Front-end Developer',
+        'fullStackDevloper': 'Full-stack Developer',
         'about': 'About',
         'profile': 'Profile',
         'workExperience': 'Work Experience',
@@ -80,7 +82,7 @@ const systemText = {
         'myPhone': '010-9164-1201',
         'email': 'Email',
         'myEmail': 'y.junh0y@gmail.com',
-        'aboutMe': 'Hello. I am Junhyeong Yang, a front-end developer. After completing a full-stack development course, I have spent the past two years building a platform site as a <span class="bold">front-end development</span>(PHP, Laravel). Leveraging my previous experience in the related industry, I have handled not only front-end development but also <span class="bold">web planning, database design, and back-end</span> (API development) tasks.',
+        'aboutMe': 'Hello. I am Junhyeong Yang, a full-stack developer. After completing a full-stack development course, I have spent the past two years building a platform site as a <span class="bold">full-stack development</span>(PHP, Laravel). Leveraging my previous experience in the related industry, I have handled not only <span class="bold">front-end development</span> but also <span class="bold">web planning, database design, and back-end</span> (API development) tasks.',
         'content': 'Content',
         'emailAlert': 'Please enter an email address.',
         'contentAlert': 'Please enter content.',
@@ -93,7 +95,7 @@ const systemText = {
         'forAdmin': 'for Admin',
 
         'ctkDate': 'APR 2022 - APR 2024',
-        'ctkRole': 'Front-end Developer / Assistant Manager',
+        'ctkRole': 'Full-stack Developer / Assistant Manager',
         'ctkDescription': '· Developed and maintained web applications using PHP, Laravel, and vue.js <br />· Collaborated with UI/UX designers to enhance user experience <br />· Developed regulatory screening functionality as a full-stack developer (planning, database design, API development) <br />· Communicated in English via email regarding external APIs and handled customer interactions in English at exhibitions <br />· Managed development outsourcing vendors',
 
         'innerbottle': 'Innerbottle',

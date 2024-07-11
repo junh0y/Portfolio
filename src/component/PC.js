@@ -197,7 +197,7 @@ export default function PC({ projects, systemText }) {
             <div className='header'>
               <div className='myName'>
                 <h1>{ text.myName }</h1>
-                <h2>{ text.frontEndDevloper }</h2>
+                <h2>{ text.fullStackDevloper }</h2>
                 <div>
                   <p>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -356,7 +356,7 @@ export default function PC({ projects, systemText }) {
                   <p>{ text.backEnd }</p>
                 </div>
                 <div className='eachDesc'>
-                  <p>{ 'PHP, Laravel, MySQL, Docker' }</p>
+                  <p>{ 'PHP, Laravel, MySQL' }</p>
                 </div>
               </div>
               <div className='eachInfo'>
@@ -364,7 +364,7 @@ export default function PC({ projects, systemText }) {
                   <p>{ text.others }</p>
                 </div>
                 <div className='eachDesc'>
-                  <p>{ 'Gitlab, Slack' }</p>
+                  <p>{ 'Git, Gitlab, Slack, Docker' }</p>
                 </div>
               </div>
               <div className='eachInfo'>
@@ -398,6 +398,7 @@ export default function PC({ projects, systemText }) {
                     <span>JAVA</span>
                     <span>Spring</span>
                     <span>React</span>
+                    <span>Python</span>
                     <span>Android</span>
                   </p>
                 </div>

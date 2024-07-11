@@ -6,7 +6,7 @@ function Developer() {
         <div className='cv'>
             <div className='header'>
                 <h1>Jun Hyeong Yang</h1>
-                <p>Bonham Street, Dublin, D08 R596 &nbsp;▪&nbsp; 083-090-2821 &nbsp;▪&nbsp; y.junh0y@gmail.com &nbsp;▪&nbsp; <a href="https://junh0y.github.io/Portfolio/">https://junh0y.github.io/Portfolio/</a></p>
+                <p>Dublin 07, Dublin County, Ireland &nbsp;▪&nbsp; 083-090-2821 &nbsp;▪&nbsp; y.junh0y@gmail.com &nbsp;▪&nbsp; <a href="https://junh0y.github.io/Portfolio/">https://junh0y.github.io/Portfolio/</a></p>
             </div>
             <div className='content'>
                 <div className='each'>
@@ -14,7 +14,7 @@ function Developer() {
                     <ul className='description'>
                         <div className="eachDescription">
                             <div className="main">
-                                <p>&nbsp;As a frontend developer with over 2 years of web development experience, I am proficient in JavaScript, jQuery, and PHP (Laravel). I have developed and maintained 4 websites, one of which is the world's first cosmetic development platform with over 20,000 customers. Utilizing my previous experience in the cosmetics industry, I planned, designed the database, and developed the API for a system that screens ingredient regulations by country, demonstrating full-stack capabilities. As a developer who believes in the importance of learning various languages, I am currently studying React and have developed my portfolio site using React (SPA).</p>
+                                <p>&nbsp;As a full-stack developer with over 2 years of web development experience, I am proficient in JavaScript, jQuery, and PHP (Laravel). I have developed and maintained 4 websites, one of which is the world's first cosmetic development platform with over 20,000 customers. Utilizing my previous experience in the cosmetics industry, I planned, designed the database, and developed the API for a system that screens ingredient regulations by country, demonstrating full-stack capabilities. As a developer who believes in the importance of learning various languages, I am currently studying React and have developed my portfolio site using React (SPA).</p>
                             </div>
                             <div className="main">
                                 <p>&nbsp;I first traveled to Ireland eight years ago and was deeply impressed by its culture and environment. This experience motivated me to return to Ireland on a working holiday visa. I am eager to experience the diverse culture and work environment here, and I believe my skills and passion will make a meaningful contribution.</p>
@@ -82,9 +82,9 @@ function Developer() {
                             <div className='sub'>
                                 <ul>
                                     <li>Front-end : HTML, CSS, JavaScript, jQuery, vue.js, React</li>
-                                    <li>Back-end : PHP (Laravel)</li>
+                                    <li>Back-end : PHP (Laravel), MySQL</li>
                                     <li>Liabrary : Bootstrap, GASP, swiper.js</li>
-                                    <li>Others : MySQL, Docker</li>
+                                    <li>Others : Git, Gitlab, Docker</li>
                                 </ul>
                             </div>
                         </div>
