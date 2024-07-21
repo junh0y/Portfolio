@@ -3,6 +3,7 @@
     max-width: 1000px;
     margin: 0 auto;
     .header {
+        position: relative;
         text-align: center;
         h1 {
             font-size: 24px;
@@ -10,6 +11,20 @@
         }
         p {
             margin-top: 8px;
+        }
+        a:has(img) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 100px;
+            aspect-ratio: 1;
+            p {
+                font-size: 14px;
+                margin-top: 0;
+            }
+        }
+        a:has(img) + p {
+            margin-top: 0;
         }
     }
     .content {
@@ -24,7 +39,6 @@
             .description {
                 padding-bottom: 8px;
                 .eachDescription {
-                    margin-top: 16px;
                     .main {
                         display: flex;
                         align-items: flex-end;
@@ -53,23 +67,35 @@
                             }
                         }
                     }
+                    .main + .main {
+                        padding-top: 0;
+                    }
                     .sub {
                         ul {
                             li {
                                 list-style: disc;
                                 margin-left: 18px;
-                                padding-top: 8px;
+                                padding-top: 4px;
+                            }
+                            li.point {
+                                list-style: '‣   ';
                             }
                         }
                     }
                 }
-                .eachDescription:first-child {
-                    margin-top: 0;
+            }
+            .description.linkList {
+                .eachDescription {
+                    .info {
+                        span:first-child {
+                            width: 70px;
+                        }
+                    }
                 }
             }
         }
         .each:not(:first-child) {
-            margin-top: 16px;
+            margin-top: 12px;
         }
     }
 }

@@ -290,7 +290,7 @@ export default function PC({ projects, systemText }) {
                     <span className='skill project1 project2 project3 project4'>Javascript</span>
                   </p>
                   <p className='skillSpan'>
-                    <span className='skill project3'>vue.js</span>
+                    <span className='skill project3'>Vue</span>
                     <span className='skill project1 project2 project4'>jQuery</span>
                     <span className='skill project4'>Bootstrap</span>
                     <span className='skill project1 project2 project3'>GSAP</span>
@@ -348,7 +348,7 @@ export default function PC({ projects, systemText }) {
                 <div className='eachDesc'>
                   <p>{ 'HTML, CSS, Javascript, jQuery' }</p>
                   <p>{ 'Bootstrap, swiper.js, GSAP' }</p>
-                  <p>{ 'React, vue.js' }</p>
+                  <p>{ 'React, Vue' }</p>
                 </div>
               </div>
               <div className='eachInfo'>
