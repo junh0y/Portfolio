@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import PartTime from './component/CV/PartTime';
 import Developer from './component/CV/Developer';
+import Error from './component/Error';
+import systemText from './systemText.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +18,7 @@ root.render(
         <Route index element={ <App />}></Route>
         <Route path='PartTime' element={ <PartTime /> }></Route>
         <Route path='Developer' element={ <Developer /> }></Route>
+        <Route path='*' element={ <Error systemText={ systemText } /> }></Route>
       </Route>
     </Routes>
   </BrowserRouter>
