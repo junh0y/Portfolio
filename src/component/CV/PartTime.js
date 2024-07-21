@@ -6,7 +6,7 @@ function PartTime() {
         <div className='cv'>
             <div className='header'>
                 <h1>Jun Hyeong Yang</h1>
-                <p>Bonham Street, Dublin, D08 R596 &nbsp;▪&nbsp; 083-090-2821 &nbsp;▪&nbsp; y.junh0y@gmail.com</p>
+                <p>Dublin 7, Dublin County, Ireland &nbsp;▪&nbsp; 083-090-2821 &nbsp;▪&nbsp; y.junh0y@gmail.com</p>
             </div>
             <div className='content'>
                 <div className='each'>
