@@ -212,6 +212,144 @@ const Projects = {
                 },
             ]
         },
+        {
+            "site": '뮤지직',
+            "contents": [
+                {
+                    "title": '사이트 개발 (PC)',
+                    "period": '2024.12 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, React',
+                    "role": '프론트엔드',
+                    "contribution": '80%',
+                    "description": '· 소개 페이지(Home, About Us) 및 뮤지카드 페이지(목록, 상세) 퍼블리싱 및 프론트 개발'
+                },
+                {
+                    "title": 'PC, 모바일 분리',
+                    "period": '2025.01 - 2025.01',
+                    "languages": 'HTML, CSS, Javascript, GSAP, React',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· 전체 페이지 PC, 모바일 분리'
+                },
+                {
+                    "title": '뮤지션 상세 페이지 커스터마이징',
+                    "period": '2025.01 - 2025.01',
+                    "languages": 'HTML, CSS, Javascript, React',
+                    "role": '프론트엔드',
+                    "contribution": '80%',
+                    "description": '· 뮤지션 개별 커스터마이징(배경, 폰트) 적용'
+                },
+                {
+                    "title": 'SEO 최적화',
+                    "period": '2025.01 - 2025.01',
+                    "languages": 'HTML, CSS, Javascript, React',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· 메타 태그 동적 생성 (라이브러리: react-helmet-async) </br>· 사이트맵 동적 생성 (라이브러리: sitemap)'
+                },
+            ]
+        },
+        {
+            "site": 'Arrow Design',
+            "contents": [
+                {
+                    "title": 'Smart Sale',
+                    "period": '2024.08 - 2024.08',
+                    "languages": 'HTML, CSS, Javascript, jQuery, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed functionality to manage user accounts.	</br>· Developed functionality to add, list, and view users\' products. </br>· Developed functionality for user-to-user communication. </br>· Developed functionality for user-to-user communication. </br>· Developed functionality for listing and filters. </br>· Developed functionality for order process by WooCommerce.'
+                },
+                {
+                    "title": 'Precision Kitchens',
+                    "period": '2024.09 - 2024.09',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'Decorum',
+                    "period": '2024.09 - 2024.09',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'ePosters',
+                    "period": '2024.10 - 2024.10',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'Soinia\'s Holistics Therapies',
+                    "period": '2024.10 - 2024.10',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'Plugin - Form Uploads',
+                    "period": '2024.11 - 2024.11',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed functionality for CURD.'
+                },
+                {
+                    "title": 'Hibernian Estates',
+                    "period": '2024.11 - 2024.11',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '50%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI). </br>· Integration of daft.ie API for Real Estate Listings.'
+                },
+                {
+                    "title": 'RTAI',
+                    "period": '2024.11 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '30%',
+                    "description": '· Re-designed and planned UI/UX. </br>· Developed the functionalities to search and unsubscribe users. </br>· Developed the functionalities to create and download PDF files. </br>· Developed the functionalities to print a multi-purpose label.'
+                },
+                {
+                    "title": 'Plugin - Custom Support',
+                    "period": '2024.12 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed functionality for customizing chat box. </br>· Developed functionality for chat service and managing history.'
+                },
+                {
+                    "title": 'Gevents',
+                    "period": '2024.12 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'NTOI',
+                    "period": '2024.12 - 2025.01',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드',
+                    "contribution": '80%',
+                    "description": '· Maintained and renewal CPD management pages.'
+                },
+                {
+                    "title": 'Gutters Plus',
+                    "period": '2025.01 - 2025.02',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+            ]
+        },
     ],
     "en": [
         {
@@ -423,6 +561,144 @@ const Projects = {
                     "role": 'UX, Front-end, Back-end(DB, API)',
                     "contribution": '100%',
                     "description": '· Improved GNB & Banner management page <br />· Developed a [Product curation] menu for a main page. <br />· Modified DB and developed API for added data'
+                },
+            ]
+        },
+        {
+            "site": 'MUSIZIC',
+            "contents": [
+                {
+                    "title": 'Site Development (Desktop)',
+                    "period": 'DEC 2024 - DEC 2024',
+                    "languages": 'HTML, CSS, Javascript, React',
+                    "role": 'Front-end',
+                    "contribution": '80%',
+                    "description": '· Developed Home, About Us, and Musicard Pages(List, Detail)'
+                },
+                {
+                    "title": 'PC and mobile views',
+                    "period": 'JAN 2025 - JAN 2025',
+                    "languages": 'HTML, CSS, Javascript, GSAP, React',
+                    "role": 'Front-end',
+                    "contribution": '100%',
+                    "description": '· Separated PC and mobile views and implemented responsive design for PC'
+                },
+                {
+                    "title": 'Customizing for musician\'s detail page',
+                    "period": 'JAN 2025 - JAN 2025',
+                    "languages": 'HTML, CSS, Javascript, React',
+                    "role": 'Front-end',
+                    "contribution": '80%',
+                    "description": '· Customized background and font style each musician'
+                },
+                {
+                    "title": 'Optimiziation SEO',
+                    "period": 'JAN 2025 - JAN 2025',
+                    "languages": 'HTML, CSS, Javascript, React',
+                    "role": 'Front-end',
+                    "contribution": '100%',
+                    "description": '· Creation dynamic meta tags (Library: react-helmet-async) </br>· Creation dynamic sitemap file (Library: sitemap)'
+                },
+            ]
+        },
+        {
+            "site": 'Arrow Design',
+            "contents": [
+                {
+                    "title": 'Smart Sale',
+                    "period": '2024.08 - 2024.08',
+                    "languages": 'HTML, CSS, Javascript, jQuery, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed functionality to manage user accounts.	</br>· Developed functionality to add, list, and view users\' products. </br>· Developed functionality for user-to-user communication. </br>· Developed functionality for user-to-user communication. </br>· Developed functionality for listing and filters. </br>· Developed functionality for order process by WooCommerce.'
+                },
+                {
+                    "title": 'Precision Kitchens',
+                    "period": '2024.09 - 2024.09',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'Decorum',
+                    "period": '2024.09 - 2024.09',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'ePosters',
+                    "period": '2024.10 - 2024.10',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'Soinia\'s Holistics Therapies',
+                    "period": '2024.10 - 2024.10',
+                    "languages": 'WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'Plugin - Form Uploads',
+                    "period": '2024.11 - 2024.11',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed functionality for CURD.'
+                },
+                {
+                    "title": 'Hibernian Estates',
+                    "period": '2024.11 - 2024.11',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '50%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI). </br>· Integration of daft.ie API for Real Estate Listings.'
+                },
+                {
+                    "title": 'RTAI',
+                    "period": '2024.11 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '30%',
+                    "description": '· Re-designed and planned UI/UX. </br>· Developed the functionalities to search and unsubscribe users. </br>· Developed the functionalities to create and download PDF files. </br>· Developed the functionalities to print a multi-purpose label.'
+                },
+                {
+                    "title": 'Plugin - Custom Support',
+                    "period": '2024.12 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드, 백엔드',
+                    "contribution": '80%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed functionality for customizing chat box. </br>· Developed functionality for chat service and managing history.'
+                },
+                {
+                    "title": 'Gevents',
+                    "period": '2024.12 - 2024.12',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
+                },
+                {
+                    "title": 'NTOI',
+                    "period": '2024.12 - 2025.01',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress',
+                    "role": '프론트엔드',
+                    "contribution": '80%',
+                    "description": '· Maintained and renewal CPD management pages.'
+                },
+                {
+                    "title": 'Gutters Plus',
+                    "period": '2025.01 - 2025.02',
+                    "languages": 'HTML, CSS, Javascript, PHP, WordPress, DIVI',
+                    "role": '프론트엔드',
+                    "contribution": '100%',
+                    "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },
             ]
         },

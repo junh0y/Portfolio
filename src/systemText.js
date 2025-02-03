@@ -24,6 +24,11 @@ const systemText = {
         'contentAlert': '내용을 입력하세요.',
         'sendSuccess': '이메일 발송이 완료되었습니다.',
 
+        'arrowDesign': 'Arrow Design',
+        'arrowDesignDate': '2024.08 - ',
+        'arrowDesignRole':  'Software Architect',
+        'arrowDesignDescription': '· PHP (WordPress) 기반 웹사이트 및 커머스 플랫폼 개발 </br>· 커스텀 WordPress 테마 및 플러그인 개발 </br>· MySQL을 활용한 데이터베이스 설계 및 최적화',
+
         'ctk': '씨티케이',
         'ctkCosmetics': '씨티케이 코스메틱스',
         'ctkClip': 'CTKCLIP',
@@ -44,6 +49,11 @@ const systemText = {
 
         'portfolio': '포트폴리오',
         'portfolioDesc': '개인 포트폴리오 사이트',
+
+        'musizic': '뮤지직',
+        'musizicDate': '2024.12 - ',
+        'musizicRole': '프론트엔드 개발',
+        'musizicDesc': '· 플랫폼 사이트 개발 및 유지보수 (React) </br>· SEO 최적화 </br>· 웹 디자인 & UI/UX 기획',
 
         'frontEnd': '프론트엔드',
         'backEnd': '백엔드',
@@ -88,6 +98,11 @@ const systemText = {
         'contentAlert': 'Please enter content.',
         'sendSuccess': 'The email has been sent successfully.',
 
+        'arrowDesign': 'Arrow Design',
+        'arrowDesignDate': 'AUG 2024 - ',
+        'arrowDesignRole':  'Software Architect',
+        'arrowDesignDescription': '· Developed websites and e-commerce platforms based on PHP (WordPress) </br>· Designed and developed custom WordPress themes and plugins </br>· Designed and optimized databases using MySQL',
+
         'ctk': 'CTK',
         'ctkCosmetics': 'CTK Cosmetics',
         'ctkClip': 'CTKCLIP',
@@ -108,6 +123,11 @@ const systemText = {
 
         'portfolio': 'Portfolio',
         'portfolioDesc': 'Personal portfolio site',
+
+        'musizic': 'MUSIZIC',
+        'musizicDate': 'DEC 2024 - ',
+        'musizicRole': 'Front-end Developer',
+        'musizicDesc': '· Developed and maintained the platform website using React </br>· Optimized SEO for better search visibility </br>· Designed the overall web UI/UX',
 
         'frontEnd': 'Front-end',
         'backEnd': 'Back-end',

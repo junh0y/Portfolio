@@ -46,14 +46,26 @@ export default function Mobile( {projects, systemText} ) {
 
 
   // 스킬 이벤트
-  const activeSkills = (project) => {
-    const skills = document.getElementsByClassName('skill');
+  const activeSkills = (element, project) => {
+    let parent;
+    
+    if (element === 1) {
+      parent  = location2Ref.current.querySelectorAll('.eachDesc')[0];
+    } else if (element === 2) {
+      parent  = location2Ref.current.querySelectorAll('.eachDesc')[1];
+    } else if (element === 3) {
+      parent  = location3Ref.current.querySelectorAll('.eachDesc')[0];
+    }
 
-    for (let i = 0 ; i < skills.length ; i++) {
-      if (skills[i].classList.contains('project' + project)) {
-        skills[i].classList.add('active');
-      } else {
-        skills[i].classList.remove('active');
+    if (parent) {
+      const skills = parent.querySelectorAll('.skill');
+  
+      for (let i = 0 ; i < skills.length ; i++) {
+        if (skills[i].classList.contains('project' + project)) {
+          skills[i].classList.add('active');
+        } else {
+          skills[i].classList.remove('active');
+        }
       }
     }
   };
@@ -236,6 +248,38 @@ export default function Mobile( {projects, systemText} ) {
                 <div className='mainTitle'>{ text.workExperience }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
+                    <Link to='https://arrowdesign.ie/' target='_blank' rel='noreferrer'>{ text.arrowDesign }</Link>
+                  </div>
+                  <div className='eachDesc'>
+                    <p>{ text.arrowDesignDate }</p>
+                    <p>{ text.arrowDesignRole }</p>
+                    <p dangerouslySetInnerHTML={{ __html: text.arrowDesignDescription }}></p>
+                    <div className='linkContent' onMouseLeave={ () => inactiveSkills() }>
+                      <div className='eachLink' onMouseOver={ () => activeSkills(1, 1) }>
+                        <div className='imageArea maxHeight'> 
+                          <img src={ require('../images/CompanyLogo3.jpg') } alt={ text.arrowDesign } />
+                        </div>
+                        <div className='hoverChange'>
+                          <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</Link>
+                          <Link to='https://arrowdesign.ie/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <p className='skillSpan'>
+                      <span className='skill project1'>HTML</span>
+                      <span className='skill project1'>CSS</span>
+                      <span className='skill project1'>Javascript</span>
+                      <span className='skill project1'>jQuery</span>
+                    </p>
+                    <p className='skillSpan'>
+                      <span className='skill project1'>PHP</span>
+                      <span className='skill project1'>WordPress</span>
+                      <span className='skill project1'>MySQL</span>
+                    </p>
+                  </div>
+                </div>
+                <div className='eachInfo'>
+                  <div className='eachTitle'>
                     <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.ctk }</Link>
                   </div>
                   <div className='eachDesc'>
@@ -243,7 +287,7 @@ export default function Mobile( {projects, systemText} ) {
                     <p>{ text.ctkRole }</p>
                     <p dangerouslySetInnerHTML={{ __html: text.ctkDescription }}></p>
                     <div className='linkContent' onMouseLeave={ () => inactiveSkills() }>
-                      <div className='eachLink' onMouseOver={ () => activeSkills(1) }>
+                      <div className='eachLink' onMouseOver={ () => activeSkills(1, 1) }>
                         <div className='imageArea'>
                             <img src={ require('../images/CompanyLogo1.jpg') } alt={ text.ctkCosmetics } />
                         </div>
@@ -252,7 +296,7 @@ export default function Mobile( {projects, systemText} ) {
                           <Link to='https://www.ctkcosmetics.com/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
-                      <div className='eachLink' onMouseOver={ () => activeSkills(2) }>
+                      <div className='eachLink' onMouseOver={ () => activeSkills(1, 2) }>
                         <div className='imageArea'>
                             <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip } />
                         </div>
@@ -261,7 +305,7 @@ export default function Mobile( {projects, systemText} ) {
                           <Link to='https://ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
-                      <div className='eachLink' onMouseOver={ () => activeSkills(3) }>
+                      <div className='eachLink' onMouseOver={ () => activeSkills(1, 3) }>
                         <div className='imageArea'>
                             <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip + ' ' + text.forPartner } />
                             <p>for Partner</p>
@@ -271,7 +315,7 @@ export default function Mobile( {projects, systemText} ) {
                           <Link to='https://partner.ctkclip.com' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                         </div>
                       </div>
-                      <div className='eachLink' onMouseOver={ () => activeSkills(4) }>
+                      <div className='eachLink' onMouseOver={ () => activeSkills(1, 4) }>
                         <div className='imageArea'>
                             <img src={ require('../images/CompanyLogo2.svg').default } alt={ text.ctkClip + ' ' + text.forAdmin } />
                             <p>for Admin</p>
@@ -322,6 +366,35 @@ export default function Mobile( {projects, systemText} ) {
                 <div className='mainTitle'>{ text.projects }</div>
                 <div className='eachInfo'>
                   <div className='eachTitle'>
+                  <Link to='https://musizic.com/' target='_blank' rel='noreferrer'>{ text.musizic }</Link>
+                  </div>
+                  <div className='eachDesc'>
+                    <p>{ text.musizicDate }</p>
+                    <p>{ text.musizicRole }</p>
+                    <p dangerouslySetInnerHTML={{ __html: text.musizicDesc }}></p>
+                    <div className='linkContent' onMouseLeave={ () => inactiveSkills() }>
+                      <div className='eachLink' onMouseOver={ () => activeSkills(3, 1) }>
+                        <div className='imageArea maxHeight'> 
+                          <img src={ require('../images/CompanyLogo4.webp') } alt={ text.arrowDesign } />
+                        </div>
+                        <div className='hoverChange'>
+                          <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(5) }>{ text.viewProjects }</Link>
+                          <Link to='https://musizic.com/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
+                        </div>
+                      </div>
+                    </div>
+                    <p className='skillSpan'>
+                      <span className='skill project1'>HTML</span>
+                      <span className='skill project1'>CSS</span>
+                      <span className='skill project1'>Javascript</span>
+                      <span className='skill project1'>GSAP</span>
+                      <span className='skill project1'>React</span>
+                      <span className='skill project1'>Firebase</span>
+                    </p>
+                  </div>
+                </div>
+                <div className='eachInfo'>
+                  <div className='eachTitle'>
                   <Link to='https://junh0y.github.io/Portfolio/' target='_blank' rel='noreferrer'>{ text.portfolio }</Link>
                   </div>
                   <div className='eachDesc'>
@@ -353,7 +426,7 @@ export default function Mobile( {projects, systemText} ) {
                     <p>{ text.backEnd }</p>
                   </div>
                   <div className='eachDesc'>
-                    <p>{ 'PHP, Laravel, MySQL' }</p>
+                    <p>{ 'PHP, Laravel, WordPress, MySQL' }</p>
                   </div>
                 </div>
                 <div className='eachInfo'>
