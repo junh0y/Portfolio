@@ -608,7 +608,7 @@ const Projects = {
                     "title": 'Smart Sale',
                     "period": '2024.08 - 2024.08',
                     "languages": 'HTML, CSS, Javascript, jQuery, PHP, WordPress',
-                    "role": '프론트엔드, 백엔드',
+                    "role": 'Front-end, Back-end',
                     "contribution": '80%',
                     "description": '· Designed and planned UI/UX. </br>· Developed functionality to manage user accounts.	</br>· Developed functionality to add, list, and view users\' products. </br>· Developed functionality for user-to-user communication. </br>· Developed functionality for user-to-user communication. </br>· Developed functionality for listing and filters. </br>· Developed functionality for order process by WooCommerce.'
                 },
@@ -616,7 +616,7 @@ const Projects = {
                     "title": 'Precision Kitchens',
                     "period": '2024.09 - 2024.09',
                     "languages": 'WordPress, DIVI',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '100%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },
@@ -624,7 +624,7 @@ const Projects = {
                     "title": 'Decorum',
                     "period": '2024.09 - 2024.09',
                     "languages": 'WordPress, DIVI',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '80%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },
@@ -632,7 +632,7 @@ const Projects = {
                     "title": 'ePosters',
                     "period": '2024.10 - 2024.10',
                     "languages": 'WordPress, DIVI',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '100%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },
@@ -640,7 +640,7 @@ const Projects = {
                     "title": 'Soinia\'s Holistics Therapies',
                     "period": '2024.10 - 2024.10',
                     "languages": 'WordPress, DIVI',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '100%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },
@@ -648,7 +648,7 @@ const Projects = {
                     "title": 'Plugin - Form Uploads',
                     "period": '2024.11 - 2024.11',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress',
-                    "role": '프론트엔드, 백엔드',
+                    "role": 'Front-end, Back-end',
                     "contribution": '80%',
                     "description": '· Designed and planned UI/UX. </br>· Developed functionality for CURD.'
                 },
@@ -656,7 +656,7 @@ const Projects = {
                     "title": 'Hibernian Estates',
                     "period": '2024.11 - 2024.11',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress',
-                    "role": '프론트엔드, 백엔드',
+                    "role": 'Front-end, Back-end',
                     "contribution": '50%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI). </br>· Integration of daft.ie API for Real Estate Listings.'
                 },
@@ -664,7 +664,7 @@ const Projects = {
                     "title": 'RTAI',
                     "period": '2024.11 - 2024.12',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress',
-                    "role": '프론트엔드, 백엔드',
+                    "role": 'Front-end, Back-end',
                     "contribution": '30%',
                     "description": '· Re-designed and planned UI/UX. </br>· Developed the functionalities to search and unsubscribe users. </br>· Developed the functionalities to create and download PDF files. </br>· Developed the functionalities to print a multi-purpose label.'
                 },
@@ -672,7 +672,7 @@ const Projects = {
                     "title": 'Plugin - Custom Support',
                     "period": '2024.12 - 2024.12',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress',
-                    "role": '프론트엔드, 백엔드',
+                    "role": 'Front-end, Back-end',
                     "contribution": '80%',
                     "description": '· Designed and planned UI/UX. </br>· Developed functionality for customizing chat box. </br>· Developed functionality for chat service and managing history.'
                 },
@@ -680,7 +680,7 @@ const Projects = {
                     "title": 'Gevents',
                     "period": '2024.12 - 2024.12',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress, DIVI',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '100%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },
@@ -688,7 +688,7 @@ const Projects = {
                     "title": 'NTOI',
                     "period": '2024.12 - 2025.01',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '80%',
                     "description": '· Maintained and renewal CPD management pages.'
                 },
@@ -696,7 +696,7 @@ const Projects = {
                     "title": 'Gutters Plus',
                     "period": '2025.01 - 2025.02',
                     "languages": 'HTML, CSS, Javascript, PHP, WordPress, DIVI',
-                    "role": '프론트엔드',
+                    "role": 'Front-end',
                     "contribution": '100%',
                     "description": '· Designed and planned UI/UX. </br>· Developed Front-end (using DIVI).'
                 },

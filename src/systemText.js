@@ -17,7 +17,7 @@ const systemText = {
         'myPhone': '010-9164-1201',
         'email': '이메일',
         'myEmail': 'y.junh0y@gmail.com',
-        'aboutMe': '안녕하세요. 풀스택 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">풀스택</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span>을 리딩하는 업무도 담당했습니다.',
+        'aboutMe': '안녕하세요. 풀스택 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">풀스택</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span>을 리딩하는 업무도 담당했습니다. 아일랜드에서는 웹 에이전시에서 워드프레스 개발자로 근무하며 풀 스택 개발을 담당했습니다.',
         'content': '내용',
         'sendEmail': '이메일 발송',
         'emailAlert': '이메일 주소를 입력하세요.',
@@ -25,7 +25,7 @@ const systemText = {
         'sendSuccess': '이메일 발송이 완료되었습니다.',
 
         'arrowDesign': 'Arrow Design',
-        'arrowDesignDate': '2024.08 - ',
+        'arrowDesignDate': '2024.08 - 2025.03',
         'arrowDesignRole':  'Software Architect',
         'arrowDesignDescription': '· PHP (WordPress) 기반 웹사이트 및 커머스 플랫폼 개발 </br>· 커스텀 WordPress 테마 및 플러그인 개발 </br>· MySQL을 활용한 데이터베이스 설계 및 최적화',
 
@@ -92,16 +92,16 @@ const systemText = {
         'myPhone': '010-9164-1201',
         'email': 'Email',
         'myEmail': 'y.junh0y@gmail.com',
-        'aboutMe': 'Hello. I am Junhyeong Yang, a full-stack developer. After completing a full-stack development course, I have spent the past two years building a platform site as a <span class="bold">full-stack development</span>(PHP, Laravel). Leveraging my previous experience in the related industry, I have handled not only <span class="bold">front-end development</span> but also <span class="bold">web planning, database design, and back-end</span> (API development) tasks.',
+        'aboutMe': 'Hello. I am Junhyeong Yang, a full-stack developer. After completing a full-stack development course, I have spent the past two years building a platform site as a <span class="bold">full-stack development</span>(PHP, Laravel). Leveraging my previous experience in the related industry, I have handled not only <span class="bold">front-end development</span> but also <span class="bold">web planning, database design, and back-end</span> (API development) tasks. In Ireland, I have worked at a web agency as a WordPress developer, where I developed and maintained websites using WordPress.',
         'content': 'Content',
         'emailAlert': 'Please enter an email address.',
         'contentAlert': 'Please enter content.',
         'sendSuccess': 'The email has been sent successfully.',
 
         'arrowDesign': 'Arrow Design',
-        'arrowDesignDate': 'AUG 2024 - ',
+        'arrowDesignDate': 'AUG 2024 - MAR 2025',
         'arrowDesignRole':  'Software Architect',
-        'arrowDesignDescription': '· Developed websites and e-commerce platforms based on PHP (WordPress) </br>· Designed and developed custom WordPress themes and plugins </br>· Designed and optimized databases using MySQL',
+        'arrowDesignDescription': '· Developed WordPress-based websites and e-commerce platforms. </br>· Designed and developed custom WordPress themes and plugins. </br>· Designed and optimized databases using MySQL.',
 
         'ctk': 'CTK',
         'ctkCosmetics': 'CTK Cosmetics',
@@ -111,12 +111,12 @@ const systemText = {
 
         'ctkDate': 'APR 2022 - APR 2024',
         'ctkRole': 'Full-stack Developer / Assistant Manager',
-        'ctkDescription': '· Developed and maintained web applications using PHP, Laravel, and vue.js <br />· Collaborated with UI/UX designers to enhance user experience <br />· Developed regulatory screening functionality as a full-stack developer (planning, database design, API development) <br />· Communicated in English via email regarding external APIs and handled customer interactions in English at exhibitions <br />· Managed development outsourcing vendors',
+        'ctkDescription': '· Developed and maintained web applications using PHP, Laravel, and vue.js. <br />· Collaborated with UI/UX designers to enhance user experience. <br />· Developed regulatory screening functionality as a full-stack developer (planning, database design, API development). <br />· Communicated in English via email regarding external APIs and handled customer interactions in English at exhibitions. <br />· Managed development outsourcing vendors.',
 
         'innerbottle': 'Innerbottle',
         'innerbottleDate': 'JUN 2019 - JUN 2021',
         'innerbottleRole': 'Researcher',
-        'innerbottleDescription': '· Researched, devloped and assured quality to cosmetic packages. <br />· Developed and improved a production technology & process',
+        'innerbottleDescription': '· Researched, devloped and assured quality to cosmetic packages. <br />· Developed and improved a production technology & process.',
 
         'viewProjects': 'View projects',
         'goToTheSite': 'Go to the site',

@@ -19,10 +19,10 @@ function Developer() {
                     <div className='description'>
                         <div className="eachDescription">
                             <div className="main">
-                                <p>&nbsp;Experienced full-stack developer with over 2 years of expertise in JavaScript, jQuery, Vue, and PHP (Laravel). Successfully developed and maintained multiple websites, including a pioneering cosmetic development platform with 20,000+ users. Skilled in database design, API development, and front-end technologies, currently expanding knowledge in React and node.js.</p>
+                                <p>&nbsp;Experienced full-stack developer with around 3 years of expertise in JavaScript, jQuery, React, Vue, PHP (Laravel), and WordPress. Successfully developed and maintained multiple websites, including a pioneering cosmetic development platform with 20,000+ users. Skilled in database design, API development, and front-end technologies, currently expanding knowledge in React and node.js.</p>
                             </div>
                             <div className="main">
-                                <p>&nbsp;Inspired by Ireland's culture and environment during a visit eight years ago, I returned on a working holiday visa to contribute my skills and passion in a diverse work environment.</p>
+                                <p>&nbsp;Inspired by Ireland's culture and environment during a visit nine years ago, I returned on a working holiday visa to contribute my skills and passion in a diverse work environment.</p>
                             </div>
                         </div>
                     </div>
@@ -31,6 +31,25 @@ function Developer() {
                 <div className='each'>
                     <p className='title'>Work Experience</p>
                     <div className='description'>
+                        <div className="eachDescription">
+                            <div className='main'>
+                                <div className="info">
+                                    <span>Arrow Design</span>
+                                    <span>Developer (Permanent)</span>
+                                    <span>Dublin, Ireland</span>
+                                </div>
+                                <div className='date'>
+                                    <span>AUG 2024 - MAR 2025</span>
+                                </div>
+                            </div>
+                            <div className='sub'>
+                                <ul>
+                                    <li>Developed WordPress-based websites and e-commerce platforms.</li>
+                                    <li>Designed and developed custom WordPress themes and plugins.</li>
+                                    <li>Designed and optimized databases using MySQL.</li>
+                                </ul>
+                            </div>
+                        </div>
                         <div className="eachDescription">
                             <div className='main'>
                                 <div className="info">
@@ -52,7 +71,7 @@ function Developer() {
                                 </ul>
                             </div>
                         </div>
-                        <div className="eachDescription">
+                        {/* <div className="eachDescription">
                             <div className='main'>
                                 <div className="info">
                                     <span>Innerbottle</span>
@@ -69,7 +88,7 @@ function Developer() {
                                     <li className='point'>Led a full-stack project at CTK to develop a feature that analyzes cosmetic ingredient regulations, leveraging my experience in conducting development tests on cosmetic raw materials.</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 {/* Skills */}
@@ -84,8 +103,8 @@ function Developer() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Front-end : HTML, CSS, JavaScript, jQuery, Vue, React, Libraries(Bootstrap, GASP, swiper.js)</li>
-                                    <li>Back-end : PHP (Laravel), MySQL</li>
+                                    <li>Front-end : HTML, CSS, JavaScript, jQuery, Vue, React, Front-end Libraries (Bootstrap, GASP, Swiper.js)</li>
+                                    <li>Back-end : PHP (Laravel), WordPress (Theme & Plugin Development), MySQL</li>
                                     <li>Others : Git, Gitlab, Docker</li>
                                 </ul>
                             </div>

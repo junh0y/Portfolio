@@ -263,7 +263,7 @@ export default function PC({ projects, systemText }) {
                         <img src={ require('../images/CompanyLogo3.jpg') } alt={ text.arrowDesign } />
                       </div>
                       <div className='hoverChange'>
-                        <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(1) }>{ text.viewProjects }</Link>
+                        <Link to={ (e) => e.preventDefault() } onClick={ () => openPopup(6) }>{ text.viewProjects }</Link>
                         <Link to='https://arrowdesign.ie/' target='_blank' rel='noreferrer'>{ text.goToTheSite }</Link>
                       </div>
                     </div>
