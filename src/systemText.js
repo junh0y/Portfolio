@@ -17,7 +17,7 @@ const systemText = {
         'myPhone': '010-9164-1201',
         'email': '이메일',
         'myEmail': 'y.junh0y@gmail.com',
-        'aboutMe': '안녕하세요. 풀스택 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">풀스택</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span>을 리딩하는 업무도 담당했습니다. 아일랜드에서는 웹 에이전시에서 워드프레스 개발자로 근무하며 풀 스택 개발을 담당했습니다.',
+        'aboutMe': '안녕하세요. 풀스택 개발자 양준형입니다. JAVA 풀스택 과정 수료 후 <span class="bold">풀스택</span> 개발 담당(PHP, Laravel)으로 2년 간 플랫폼 사이트를 구축했습니다. 해당 플랫폼과 관련하여 이전의 경력을 바탕으로 <span class="bold">웹 기획, DB 설계, 백엔드(API 개발)</span>을 리딩하는 업무도 담당했습니다. 아일랜드에서는 웹 에이전시에서 워드프레스 개발자로 근무하며 풀 스택 개발을 담당했습니다. 현재는 프론트엔드 관련 기술을 익히기 위해 인디 뮤지션을 대상으로 한 플랫폼을 React, Next.js, TypeScript를 이용하여 사이드 프로젝트로 개발하고 있습니다.',
         'content': '내용',
         'sendEmail': '이메일 발송',
         'emailAlert': '이메일 주소를 입력하세요.',
@@ -53,7 +53,7 @@ const systemText = {
         'musizic': '뮤지직',
         'musizicDate': '2024.12 - ',
         'musizicRole': '프론트엔드 개발',
-        'musizicDesc': '· 플랫폼 사이트 개발 및 유지보수 (React) </br>· SEO 최적화 </br>· 웹 디자인 & UI/UX 기획',
+        'musizicDesc': '· 플랫폼 사이트 개발 및 유지보수 (React, Next.js, TypeScript) </br>· SEO 최적화 </br>· 웹 디자인 & UI/UX 기획',
 
         'frontEnd': '프론트엔드',
         'backEnd': '백엔드',
@@ -63,6 +63,7 @@ const systemText = {
         'english': '영어 (중급)',
         'englishExtra1': '· 전시회 고객 응대 (코스모프로프 2019, 2022)',
         'englishExtra2': '· 외부 API 관련 이메일 소통',
+        'englishExtra3': '· 아일랜드 웹 에이전시 근무',
 
         'kosmo': '한국소프트웨어인재개발원',
         'kosmoDate': '2021.09 - 2022.03',
@@ -127,7 +128,7 @@ const systemText = {
         'musizic': 'MUSIZIC',
         'musizicDate': 'DEC 2024 - ',
         'musizicRole': 'Front-end Developer',
-        'musizicDesc': '· Developed and maintained the platform website using React </br>· Optimized SEO for better search visibility </br>· Designed the overall web UI/UX',
+        'musizicDesc': '· Developed and maintained the platform website using React, Next.js, and TypeScript. </br>· Optimized SEO for better search visibility </br>· Designed the overall web UI/UX',
 
         'frontEnd': 'Front-end',
         'backEnd': 'Back-end',
@@ -137,6 +138,7 @@ const systemText = {
         'english': 'English (Intermediate)',
         'englishExtra1': '· Handled customer service at exhibitions (Cosmoprof 2019, 2022)',
         'englishExtra2': '· Communicated via email regarding external APIs',
+        'englishExtra3': '· Worked at a web agency in Ireland',
 
         'kosmo': 'KOSMO',
         'kosmoDate': 'SEP 2021 - MAR 2022',

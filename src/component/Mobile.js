@@ -389,6 +389,8 @@ export default function Mobile( {projects, systemText} ) {
                       <span className='skill project1'>Javascript</span>
                       <span className='skill project1'>GSAP</span>
                       <span className='skill project1'>React</span>
+                      <span className='skill project1'>Next.js</span>
+                      <span className='skill project1'>TypeScript</span>
                       <span className='skill project1'>Firebase</span>
                     </p>
                   </div>
@@ -418,7 +420,7 @@ export default function Mobile( {projects, systemText} ) {
                   <div className='eachDesc'>
                     <p>{ 'HTML, CSS, Javascript, jQuery' }</p>
                     <p>{ 'Bootstrap, swiper.js, GSAP' }</p>
-                    <p>{ 'React, Vue' }</p>
+                    <p>{ 'React, Next.js, TypeScript, Vue' }</p>
                   </div>
                 </div>
                 <div className='eachInfo'>
@@ -447,6 +449,7 @@ export default function Mobile( {projects, systemText} ) {
                     <ul className='extra'>
                       <li>{ text.englishExtra1 }</li>
                       <li>{ text.englishExtra2 }</li>
+                      <li>{ text.englishExtra3 }</li>
                     </ul>
                   </div>
                 </div>

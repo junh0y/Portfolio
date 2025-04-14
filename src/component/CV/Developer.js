@@ -8,7 +8,7 @@ function Developer() {
             <div className='header'>
                 <h1>Jun Hyeong Yang</h1>
                 <p>Dublin 07, Dublin County, Ireland &nbsp;▪&nbsp; 083-090-2821 &nbsp;▪&nbsp; y.junh0y@gmail.com</p>
-                <Link>
+                <Link to="https://junh0y.github.io/Portfolio/" target='_blank'>
                     <img src={ require('../../images/QR-Code.png') } alt='Portfolio QR Code' />
                     <p>Portfolio</p>
                 </Link>
@@ -19,10 +19,7 @@ function Developer() {
                     <div className='description'>
                         <div className="eachDescription">
                             <div className="main">
-                                <p>&nbsp;Experienced full-stack developer with around 3 years of expertise in JavaScript, jQuery, React, Vue, PHP (Laravel), and WordPress. Successfully developed and maintained multiple websites, including a pioneering cosmetic development platform with 20,000+ users. Skilled in database design, API development, and front-end technologies, currently expanding knowledge in React and node.js.</p>
-                            </div>
-                            <div className="main">
-                                <p>&nbsp;Inspired by Ireland's culture and environment during a visit nine years ago, I returned on a working holiday visa to contribute my skills and passion in a diverse work environment.</p>
+                                <p>&nbsp;Full-stack developer with nearly 3 years of experience in JavaScript (React, Vue, jQuery), PHP (Laravel), MySQL, and WordPress. Developed and maintained multiple websites, including a cosmetic development platform with 20,000+ users in South Korea. Worked at a web agency in Ireland, specializing in WordPress development. Skilled in database design, API development, and front-end technologies to enhance user experience. Currently refining React, Next.js, and TypeScript skills through a side project.</p>
                             </div>
                         </div>
                     </div>
@@ -35,7 +32,7 @@ function Developer() {
                             <div className='main'>
                                 <div className="info">
                                     <span>Arrow Design</span>
-                                    <span>Developer (Permanent)</span>
+                                    <span>Software Architect (Permanent)</span>
                                     <span>Dublin, Ireland</span>
                                 </div>
                                 <div className='date'>
@@ -54,7 +51,7 @@ function Developer() {
                             <div className='main'>
                                 <div className="info">
                                     <span>CTK</span>
-                                    <span>Developer (Permanent)</span>
+                                    <span>Full Stack Developer (Permanent)</span>
                                     <span>Seoul, South Korea</span>
                                 </div>
                                 <div className='date'>
@@ -63,11 +60,10 @@ function Developer() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Developed and maintained web applications using PHP, Laravel, and Vue.</li>
-                                    <li>Collaborated with UI/UX designers to enhance user experience.</li>
-                                    <li>Developed regulatory screening functionality as a full-stack developer (planning, database design, API development).</li>
-                                    <li>Communicated in English via email regarding external APIs and handled customer interactions in English at exhibitions.</li>
-                                    <li>Shared information and progress related to development using Scrum methodology.</li>
+                                    <li>Developed and maintained 4 web applications using PHP, Laravel, and Vue.</li>
+                                    <li>Collaborated with UI/UX designers to optimize responsive web and mobile design, enhancing user experience.</li>
+                                    <li>Led development of regulatory screening functionality, including planning, database design, and API development.</li>
+                                    <li>Integrated third-party APIs (U.S.-based) for regulatory screening functionality.</li>
                                 </ul>
                             </div>
                         </div>
@@ -91,6 +87,31 @@ function Developer() {
                         </div> */}
                     </div>
                 </div>
+                {/* Experience */}
+                <div className='each'>
+                    <p className='title'>Team Projects</p>
+                    <div className='description'>
+                        <div className="eachDescription">
+                            <div className='main'>
+                                <div className="info">
+                                    <span>Musizic</span>
+                                    <span>Front-end Developer</span>
+                                    <span>South Korea</span>
+                                </div>
+                                <div className='date'>
+                                    <span>DEC 2024 - </span>
+                                </div>
+                            </div>
+                            <div className='sub'>
+                                <ul>
+                                    <li>The platform for independent musicians to promote their work and connect with others.</li>
+                                    <li>Developed a web application for musicians using React, Next.js, and TypeScript.<Link to='https://musizic.com' target='_blank'> (https://musizic.com)</Link> </li>
+                                    <li>Planned, designed, and implemented UI/UX using Figma.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 {/* Skills */}
                 <div className='each'>
                     <p className='title'>Skills</p>
@@ -103,9 +124,8 @@ function Developer() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Front-end : HTML, CSS, JavaScript, jQuery, Vue, React, Front-end Libraries (Bootstrap, GASP, Swiper.js)</li>
+                                    <li>Front-end : HTML, CSS, JavaScript, jQuery, Vue, React, Next.js, TypeScript, Front-end Libraries (Bootstrap, GASP, ...)</li>
                                     <li>Back-end : PHP (Laravel), WordPress (Theme & Plugin Development), MySQL</li>
-                                    <li>Others : Git, Gitlab, Docker</li>
                                 </ul>
                             </div>
                         </div>
@@ -140,7 +160,6 @@ function Developer() {
                             <div className='sub'>
                                 <ul>
                                     <li>Completed the JAVA Full Stack Expert Training Program.</li>
-                                    <li>Developed a menu recommendation web application as part of the training program.</li>
                                 </ul>
                             </div>
                         </div>
@@ -156,8 +175,7 @@ function Developer() {
                             </div>
                             <div className='sub'>
                                 <ul>
-                                    <li>Bachelor of Mechanical System Design Engineering</li>
-                                    <li>Minor in Ceramic & Glass</li>
+                                    <li>Bachelor of Mechanical System Design Engineering (Minor in Ceramic & Glass)</li>
                                 </ul>
                             </div>
                         </div>
